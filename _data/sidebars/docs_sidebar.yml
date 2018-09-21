@@ -1,0 +1,93 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: Sidebar
+  product: Simple Sourcing
+  version: 0.1
+
+  folders:
+  - title: Home
+    output: web
+    folderitems:
+    - title: Home
+      output: web
+      url: /docs_home.html
+
+  - title: Overview
+    output: web
+    folderitems:
+      - title: Event Sourcing
+        output: web
+        url: /event_sourcing.html
+      - title: Design Overview
+        output: web
+        url: /design.html
+      - title: Concepts
+        output: web
+        url: /concepts.html
+
+  - title: Quick Start
+    output: web
+    folderitems:
+    - title: Quick Start
+      output: web
+      url: /quickstart.html
+
+  - title: Examples
+    output: web
+    folderitems:
+      - title: Users
+        output: web
+        url: /users.html
+      - title: Auction
+        output: web
+        url: /auction.html
+
+  - title: Project Setup
+    output: web
+    folderitems:
+      - title: IDE Setup
+        output: web
+        url: /ide.html
+      - title: Kafka Setup
+        output: web
+        url: /kafka.html
+
+  - title: Application Development
+    output: web
+    folderitems:
+      - title: API Overview
+        output: web
+        url: /api.html
+      - title: Command Handlers
+        output: web
+        url: /commandhandlers.html
+      - title: Aggregators
+        output: web
+        url: /eventaggregators.html
+      - title: Runners
+        output: web
+        url: /runners.html
+      - title: Serialization
+        output: web
+        url: /serialization.html
+      - title: Materialized Views
+        output: web
+        url: /views.html
+      - title: Testing
+        output: web
+        url: /testing.html
+
+  - title: Deployment and Operations
+    output: web
+    folderitems:
+    - title: Deployment and Operations
+      output: web
+      url: /deployment.html
+
+  - title: Debugging and Monitoring
+    output: web
+    folderitems:
+    - title: Debugging and Monitoring
+      output: web
+      url: /debugging.html

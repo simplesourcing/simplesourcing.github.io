@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Titillium+Web:300,400,700');
+
+body {
+    background-color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    color: inherit
+}
+
+
+
+.navbar-inverse {
+    background-color: rgba(255, 255, 255, 0.85);
+    height: 100px;
+    border: none;
+}
+
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
+    color: #00489D;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, a.fa.fa-home.fa-lg.navbar-brand:hover {
+    color: #1C85FF;
+}
+
+.navbar-inverse .navbar-brand:before {
+    vertical-align: middle;
+    content: ' ';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url('../images/logoMark_stack_simpleSourcing.svg');
+    background-repeat: no-repeat;
+}
+
+span.projectTitle {
+    vertical-align: middle;
+    font-family: 'Titillium Web', sans-serif;
+    display: inline-block;
+}
+
+.container.topnavlinks {
+    padding-top: 23px;
+}
+
+.hero {
+    background-image: url("../images/Light%20Image%20Group@2x.jpg");
+    background-size: cover;
+    background-color: 002A5B;
+    margin-top: -120px;
+    padding-top: 130px;
+    padding-bottom: 10rem;
+    text-align: left;
+    margin-bottom: 6rem;
+}
+
+.hero h1 {
+    font-size: 7rem;
+    margin-bottom: 25px;
+}
+
+.hero h1 strong {
+    color: #00489D;
+}
+
+.hero .btn-lg {
+    font-size: 2.25rem;
+    font-weight: 200;
+    -webkit-border-radius: 200px;
+    border-radius: 200px;
+    padding: 18px 46px;
+    vertical-align: middle;
+}
+
+.hero .btn-primary {
+    background-color: #00489D;
+    
+    -webkit-transition: background 0.25s ease-out;
+    -moz-transition: background 0.25s ease-out;
+    -ms-transition: background 0.25s ease-out;
+    -o-transition: background 0.25s ease-out;
+    transition: background 0.25s ease-out;
+}
+
+.hero .btn-primary:hover {
+    background-color: #1C85FF;
+}
+
+.hero .btn i {
+    content: " ";
+    display: inline-block;
+    width: 38px;
+    height: 32px;
+    margin-right: 5px;
+    background-image: url('../images/ico_Documentation.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.main-text h2 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+
+p.intro {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 3.5rem;
+}
+
+.row.callout {
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.row.callout h1 {
+    margin: 0;
+}
+
+.row.callout h1 i {
+    font-style: normal;
+}
+
+.row.callout h1 i:before {
+    content: " ";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.row.callout h1 i.get-started:before {
+    background-image: url('../images/ico_ThumbUp.svg'); 
+}
+
+.row.callout h1 i.api:before {
+    background-image: url('../images/ico_Monitor.svg'); 
+}
+
+.row.callout h1 i.read-only:before {
+    background-image: url('../images/ico_HappySpeechBubble.svg');
+}
+
+.row.callout h1 i.scalable:before {
+    background-image: url('../images/ico_square-ruler.svg'); 
+}
+
+.row.callout h1 i.productive:before {
+    background-image: url('../images/ico_growthchart.svg'); 
+}
+
+.row.callout h1 i.reliable:before {
+    background-image: url('../images/ico_Server.svg'); 
+}
+
+footer {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #002A5B;
+    margin: 0;
+    padding: 50px 0;
+    color: white;
+}
+
+footer span.brandtext {
+    font-size: 1.15rem;
+    letter-spacing: 1.2px;
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
