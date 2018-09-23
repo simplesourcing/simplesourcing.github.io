@@ -23,7 +23,7 @@ permalink: index.html
 
         </div>
         <div class="col-md-6 text-center">
-            <p>TODO: Draw this ourselves:</p>
+            <p hidden>TODO: Draw this ourselves:</p>
             <img style="width:50%;height:50%;" src="https://www.confluent.io/wp-content/uploads/2016/09/Event-sourced-based-architecture.jpeg">
         </div>
     </div>
