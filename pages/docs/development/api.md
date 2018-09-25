@@ -6,7 +6,7 @@ permalink: api.html
 
 ## Java
 
-TODO: link to JavaDocs...
+Javadocs *coming soon...*
 
 ### Command Handlers
 
