@@ -8,17 +8,17 @@ permalink: quickstart.html
 
 ![](https://maven-badges.herokuapp.com/maven-central/io.simplesource/simplesource-command-api/badge.svg)
 
-Include the following dependencies in you build file:
+Include dependencies in you build file:
 
 * Group ID: `io.simplesource`
-* Artifact ID: `simplesource-command-<project>`
-* Version: `?.?.?` - Latest version in Maven central, as above.
+* Artifact ID: `simplesource-command-<module>`
+* Version: `?.?.?` - Latest version in Maven Central, as above.
 
-Where `<project>` is one or more of:
+Where `<module>` is one or more of:
 * `api` - core API (required)
 * `kafka` - core Kafka implementation (required)
-* `serialization` - for serialization helpers (optional)
-* `testutils` - for testing utilities (optional)
+* `serialization` - serialization helpers (optional)
+* `testutils` - testing utilities (optional)
 
 ## Getting the source
 
@@ -32,7 +32,9 @@ git clone https://github.com/simplesourcing/simplesource.git
 git clone https://github.com/simplesourcing/simplesource-examples.git
 ```
 
-## Pre-requisites
+## Local build and run
+
+### Pre-requisites
 
 Ensure your local developer machine has the following tools installed 
 
@@ -40,18 +42,18 @@ Ensure your local developer machine has the following tools installed
    * [Maven 3.5.x](https://maven.apache.org/download.cgi)
    * [Docker](https://download.docker.com/mac/stable/Docker.dmg)
    
-## Docker
+#### Docker
 
 We have used Docker to allow developers to easily run a full suite of Kafka components locally.
 Docker isn't a requirement to use Simple Sourcing. We have found Docker provides 
 a productive development environment where software engineers each get their own independent
 test environment they can tear down and recreate in seconds.
 
-### IntelliJ setup
+##### IntelliJ setup
 
 If you choose to use IntelliJ as your IDE, make sure you have the Maven and Lombok plugins installed.
 
-## Running examples
+### Running examples
 
 Take a look in the [Example repo](https://github.com/simplesourcing/simplesource-examples) for some working examples of event sourcing systems using
 Simple Sourcing. 
@@ -65,7 +67,7 @@ Each example has the following structure
 
 Each of the example applications has one or more `Runner` classes with main methods to run simple tests of the included aggregate types. Run these from your IDE or from the command line using Maven
 
-#### User Avro example
+#### User example (Avro)
 
 1. **Start the backend**
     
@@ -122,9 +124,9 @@ The dependencies and the front end run in Docker. The backend is run locally.
     
 1. Open a browser at [http://localhost:3000](http://localhost:3000)
 
-## Troubleshooting
+### Troubleshooting
 
-### InvalidStateStoreException
+##### InvalidStateStoreException
 
 If when trying the example runners you see something like the following exception...
 
