@@ -1,0 +1,10 @@
+io.simplesource.api
+io.simplesource.data
+io.simplesource.dsl
+io.simplesource.kafka.api
+io.simplesource.kafka.dsl
+io.simplesource.kafka.model
+io.simplesource.kafka.serialization.avro
+io.simplesource.kafka.serialization.json
+io.simplesource.kafka.serialization.util
+io.simplesource.kafka.spec
