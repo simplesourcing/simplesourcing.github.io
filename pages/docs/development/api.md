@@ -6,7 +6,7 @@ permalink: api.html
 
 ## Java
 
-Javadocs *coming soon...*
+Javadocs are available [here](/apidocs)
 
 ### Command Handlers
 
