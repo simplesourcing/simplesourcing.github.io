@@ -33,7 +33,7 @@ They can be created a assembled with the [AggregateSetBuilder DSL](runners.html)
 
 ### Serde
 
-A Serde is a mechanism for [**ser**ializing and **de**zerialising](serialization.html) your domain objects. 
+A Serde is a mechanism for [**ser**ializing and **de**serializing](serialization.html) your domain objects. 
 Serdes are required by any operation that may move data on the Kafka cluster.
 
 ## Kotlin
