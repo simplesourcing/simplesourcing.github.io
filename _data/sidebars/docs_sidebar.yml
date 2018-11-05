@@ -36,12 +36,9 @@ entries:
   - title: Examples
     output: web
     folderitems:
-      - title: Users
+      - title: Examples
         output: web
-        url: /users.html
-      - title: Auction
-        output: web
-        url: /auction.html
+        url: /examples.html
 
   - title: Project Setup
     output: web
