@@ -42,4 +42,4 @@ Here `doCreateAccount`, `doUpdateAccount` etc. are command handlers for individu
 1. The command handler function must perform all validation required to ensure that the aggregate always has consistent state.
 1. Command handlers, should be pure functions and should neither block execution, nor have side effects, nor modify incoming state.
 1. Sequence checking is performed by default before the command handler is invoked. This ensures that the user is always executing a command 
-based on the latest version of the aggregate. This check can be suppressed by adding the build step `withInvalidSequenceStrategy(InvalidSequenceStrategy.LastWriteWins)` to the `AggregateBuilder`. 
+based on the latest version of the aggregate. This check can be suppressed by adding the build step `withInvalidSequenceStrategy(InvalidSequenceStrategy.LastWriteWins)` to the `AggregateBuilder`.

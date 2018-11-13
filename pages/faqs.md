@@ -35,3 +35,4 @@ but its data can be reproduced completely from just the event topic.
 
 In our implementation Kafka Streams does checkpoint the KTable so recovery
 will be from the checkpoint (but that is really an implementation optimisation).
+

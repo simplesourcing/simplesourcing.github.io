@@ -71,7 +71,7 @@ $ docker-compose down
 ### Schema Registry
 
 If you are using Avro to serialize the messages on Kafka, you will also
-want to setup a [Schema Registry](https://www.confluent.io/confluent-schema-registry/).
+need the [Schema Registry](https://www.confluent.io/confluent-schema-registry/) to be present in the stack.
 
 Add the following to your `docker-compose.yml`:
 

@@ -17,7 +17,7 @@ Include dependencies in you build file:
 Where `<module>` is one or more of:
 * `api` - core API (required)
 * `kafka` - core Kafka implementation (required)
-* `serialization` - serialization helpers (optional)
+* `serialization` - serialization helpers (recommended)
 * `testutils` - testing utilities (optional)
 
 ## Getting the source
