@@ -14,7 +14,7 @@ The minimum viable Simple Sourcing deployment consists of the following:
 * 3 or more Kafka broker instances
 * If using Avro serialization, an instance of the Confluent Schema registry
 
-See the example app `examples/auction` for an example docker configuration.
+See the [auction example app](https://github.com/simplesourcing/simplesource-examples/tree/master/examples/auction) for an example docker configuration.
 
 ## Inspecting data in Kafka
 
@@ -56,3 +56,6 @@ docker-compose exec broker kafka-console-consumer \
   --from-beginning \
   --topic simple-events
 ```
+
+The [Simple Sourcing example repo](https://github.com/simplesourcing/simplesource-examples) also consists of [scripts](https://github.com/simplesourcing/simplesource-examples/tree/master/scripts) to perform these tasks on a running docker stack.
+

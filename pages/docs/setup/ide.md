@@ -15,4 +15,4 @@ More information on [Project Lombok](https://projectlombok.org/setup/intellij)
 
 ## Eclipse
 
-Install the Lombok Plugin as described here: https://projectlombok.org/setup/eclipse
+Install the Lombok Plugin [as described here.](https://projectlombok.org/setup/eclipse)

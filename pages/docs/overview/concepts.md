@@ -25,6 +25,8 @@ A *projection* is a view of the current state of an aggregate or a sub-domain.
 
 Projections are realized by applying the events from the beginning of time to get to the current state.
 
+The aggregate state is itself a projection - this is generated and maintained by Simple Sourcing. For generating
+all other projections and aggregations, we recommend using Kafka Streams or KSQL. 
 
 #### Further reading
    * [Event Sourcing and CQRS](event_sourcing.md) - a brief description of these concepts

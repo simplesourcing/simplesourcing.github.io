@@ -56,15 +56,21 @@ entries:
       - title: API Overview
         output: web
         url: /api.html
+      - title: Command API
+        output: web
+        url: /command_api.html
       - title: Command Handlers
         output: web
         url: /commandhandlers.html
       - title: Aggregators
         output: web
         url: /eventaggregators.html
-      - title: Runners
+      - title: Aggregate Builders
         output: web
-        url: /runners.html
+        url: /aggregate_builders.html
+      - title: Aggregate Sets
+        output: web
+        url: /aggregate_sets.html
       - title: Serialization
         output: web
         url: /serialization.html
