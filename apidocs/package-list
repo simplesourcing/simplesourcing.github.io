@@ -8,3 +8,5 @@ io.simplesource.kafka.serialization.avro
 io.simplesource.kafka.serialization.json
 io.simplesource.kafka.serialization.util
 io.simplesource.kafka.spec
+io.simplesource.kafka.testutils
+io.simplesource.kafka.util
