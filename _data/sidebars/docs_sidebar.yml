@@ -67,9 +67,9 @@ entries:
       - title: Aggregate Builders
         output: web
         url: /aggregate_builders.html
-      - title: Aggregate Sets
+      - title: Running Applications
         output: web
-        url: /aggregate_sets.html
+        url: /application_builder.html
       - title: Serialization
         output: web
         url: /serialization.html
