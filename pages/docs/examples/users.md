@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Users
+title: Users Example in Detail
 permalink: users.html
 ---
 
@@ -14,7 +14,7 @@ Firstly we decide on the aggregates for the domain. In this case we have
 a single aggregate called `User` representing the current state of the
 system.
 
-```
+```java
 @Data
 @Builder(toBuilder = true)
 @AllArgsConstructor
@@ -40,7 +40,7 @@ will follow a pattern of xxxUpdated, xxxDeleted etc.
 
 For Users we have the following:
 
-```
+```java
 public interface UserEvent {
 
     @Data
@@ -74,7 +74,7 @@ necessary, however for Avro, an idl and mapping code will be required.
 
 For each event add an equivalent record to the avro idl. For example:
 
-```
+```java
   record UserInserted {
     string firstName;
     string lastName;
@@ -99,7 +99,7 @@ simply return objects in the correct form.
 
 Converting from an Event (the Domain) to an Avro object:
 
-```
+```java
 if (value instanceof UserEvent.UserInserted) {
     final UserEvent.UserInserted event = (UserEvent.UserInserted)value;
     return new UserInserted(event.firstName(), event.lastName());
@@ -108,7 +108,7 @@ if (value instanceof UserEvent.UserInserted) {
 
 Converting from an Avro object to a User domain object is equally simple:
 
-```
+```java
 final GenericRecord specificRecord = mapper.fromGeneric(serialized);
 if (specificRecord instanceof UserInserted) {
     final UserInserted event = (UserInserted)specificRecord;
@@ -123,7 +123,7 @@ aggregate, applies an event to it to produce a new updated aggregate.
 One `Aggregator` is required for each event and we implement these
 alongside the events.
 
-```
+```java
 static Aggregator<YearOfBirthUpdated, Optional<User>> handleYearOfBirthUpdated() {
     return (currentAggregate, event) ->
             currentAggregate.map(user -> user.toBuilder()
@@ -144,7 +144,7 @@ Commands are requests to create an event which indicates the aggregate
 was changed. There should be one command for each event. For Users we
 have the following commands:
 
-```
+```java
 public interface UserCommand {
 
     @Data
@@ -172,13 +172,13 @@ Commands are also stored in Kafka an such are are required to be
 serializable. If using Avro then avro idl, and domain mappers will be
 required.
 
-## Command Handlers
+## Command handlers
 
 When the system reads commands it must decide whether or not the
 command can be processed, and if it can create the appropriate event.
 This is done by implementing `CommandHandlers`. For example:
 
-```
+```java
 static CommandHandler<UserKey, UpdateYearOfBirth, UserEvent, Optional<User>> doUpdateYearOfBirth() {
     return CommandHandler.ifSeq(
             (userId, currentAggregate, command) -> currentAggregate
@@ -209,7 +209,7 @@ For events and commands we need to map the event objects to `Aggregators`
 and the command objects to `CommandHandlers`. Both are achieved in a very
 similar way:
 
-```
+```java
 static Aggregator<UserEvent, Optional<User>> getAggregator() {
     return AggregatorBuilder.<UserEvent, Optional<User>> newBuilder()
             .onEvent(UserInserted.class, handleUserInserted())
@@ -223,7 +223,7 @@ static Aggregator<UserEvent, Optional<User>> getAggregator() {
 
 and
 
-```
+```java
     static CommandHandler<UserKey, UserCommand, UserEvent, Optional<User>> getCommandHandler() {
         return CommandHandlerBuilder.<UserKey, UserCommand, UserEvent, Optional<User>>newBuilder()
                 // Command handling
@@ -244,7 +244,7 @@ and the functions which handle them.
 An `AggregatorSpec` defines the settings required for Simple Sourcing to
 run. In particular it calls `getAggregator()` and `getCommandHandler()`.
 
-```
+```java
 static public <S> AggregateSpec<UserKey, UserCommand, UserEvent, S, Optional<User>> createSpec(
         final String name,
         final DomainSerializer<UserKey, UserCommand, UserEvent, S, Optional<User>> aggregateSerdes,
@@ -262,12 +262,12 @@ static public <S> AggregateSpec<UserKey, UserCommand, UserEvent, S, Optional<Use
 }
 ```
 
-## Business Logic
+## Business logic
 
 With all the bits in place we can now write some business logic to create
 and update users.
 
-```
+```java
 public static FutureResult<CommandError, NonEmptyList<Sequence>> submitCommands(
         final CommandAPI<UserKey, UserCommand> commandAPI
 ) {
@@ -337,8 +337,8 @@ We can finally put everything together. We need to get hold of a
 `commandAPI` so it can be passed into the business logic. The following
 builds one with the relevant kafka settings.
 
-```
-final CommandAPISet aggregateSet = new AggregateSetBuilder()
+```java
+final CommandAPISet aggregateSet = new EventSourcedApp()
     .withKafkaConfig(builder ->
         builder
             .withKafkaApplicationId("userAvroApp1")
@@ -351,13 +351,14 @@ final CommandAPISet aggregateSet = new AggregateSetBuilder()
         new PrefixResourceNamingStrategy("user_avro_"),
             k -> null
     ))
-    .build();
+    .start()
+    .getCommandAPISet();
 final CommandAPI<UserId, GenericRecord> api =
     aggregateSet.getCommandAPI(aggregateName);
 ```
 
 Finally we can call:
-```
+```java
 submitCommands(api).unsafePerform(e -> CommandError.InternalError);
 ```
 

@@ -13,14 +13,14 @@ An aggregate requires a command handler for each command that operates on it. Th
 
 ## Defining command handlers
 
-To define a command handler, provide an implementation of the [CommandHandler](/simplesource-command-api/src/main/java/io/simplesource/api/CommandHandler.java)
+To define a command handler, provide an implementation of the [`CommandHandler`](/apidocs/io/simplesource/api/CommandHandler.html)
 interface for each aggregate type you wish to support, and add them using the Command handler builder DSL.
 
 ### Command handler builder DSL
 
 Most aggregates are acted upon by multiple commands. 
 
-A [CommandHandlerBuilder](/simplesource-command-api/src/main/java/io/simplesource/dsl/CommandHandlerBuilder.java)
+A [`CommandHandlerBuilder`](/apidocs/io/simplesource/dsl/CommandHandlerBuilder.html)
 builder can be used to define a multi-command command handler on an aggregate from a set single-command command handlers.
 
 For example:
@@ -36,7 +36,7 @@ CommandHandlerBuilder.<AccountKey, AccountCommand, AccountEvents.AccountEvent, O
 Here `doCreateAccount`, `doUpdateAccount` etc. are command handlers for individual accounts.
 
 
-### Best practices for Command Handlers
+### Best practices for command handlers
 
 1. It is recommended to do some sanity checking on command parameters prior to invoking the `CommandAPI`. E.g. testing for negative bounds.
 1. The command handler function must perform all validation required to ensure that the aggregate always has consistent state.

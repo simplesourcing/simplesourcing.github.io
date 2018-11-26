@@ -4,13 +4,13 @@ title: Event aggregators
 permalink: eventaggregators.html
 ---
 
-An `Aggregator` is a function which takes the current aggregate, 
+An event handler, or event aggregator, is a function which takes the current aggregate, 
 applies an event to it to produce a new updated aggregate. 
-One `Aggregator` is required for each event.
+One [`Aggregator`](/apidocs/io/simplesource/api/Aggregator.html) is required for each event.
 
 ### Event aggregator DSL
 
-An aggregator `AggregatorBuilder` builder can be used to define aggregator functions for multiple event types from a set
+An aggregator [`AggregatorBuilder`](/apidocs/io/simplesource/dsl/AggregatorBuilder.html) builder can be used to define aggregator functions for multiple event types from a set
 of single-event aggregators. 
 
 For example:

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Deployment and Operations
+title: Kafka Deployment
 permalink: deployment.html
 ---
 
@@ -26,7 +26,7 @@ docker-compose exec broker kafka-topics --zookeeper zookeeper:2181 --list
 ```
 
 To see what data is available in a given topic
-```
+```bash
 docker-compose exec broker kafka-run-class kafka.tools.GetOffsetShell \
   --offsets 10 --broker-list broker:9092 \
   --topic simple-events
@@ -39,7 +39,7 @@ This outputs one line per topic partition in the following format
 ```
 
 To see the contents of the event source topic from the beginning if using Avro
-```
+```bash
 docker-compose exec schema_registry kafka-avro-console-consumer \
   --bootstrap-server broker:9092 \
   --property schema.registry.url=http://schema_registry:8081 \
@@ -49,7 +49,7 @@ docker-compose exec schema_registry kafka-avro-console-consumer \
 ```
 
 If using text based encodings like JSON you can use
-```
+```bash
 docker-compose exec broker kafka-console-consumer \
   --bootstrap-server broker:9092 \
   --property print.key=true \

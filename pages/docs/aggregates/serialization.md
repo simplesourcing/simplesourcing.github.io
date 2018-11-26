@@ -4,11 +4,11 @@ title: Serialization
 permalink: serialization.html
 ---
 
-Any Kafka streams operation that writes to disk requires a [Serde](https://kafka.apache.org/11/javadoc/org/apache/kafka/common/serialization/Serde.html) 
+Any Kafka streams operation that writes to disk requires a [Serde](https://kafka.apache.org/21/javadoc/org/apache/kafka/common/serialization/Serde.html) 
 for each type that needs to be serialized.
 
-For each aggregate, a set of Serdes is required, and it the responsibility of the client to create these, 
-by providing an implementation of the `AggregateSerdes` interface.
+For each aggregate, a set of Serdes is required, and it the responsibility of the user to create these, 
+by providing an implementation of the [`AggregateSerdes`](/apidocs/io/simplesource/kafka/api/AggregateSerdes.html) interface. For the Simple Sourcing client, a simpler [`CommandSerdes`](/apidocs/io/simplesource/kafka/api/CommandSerdes.html) implementation must be provided.
 
 Simple Sourcing provides some utilities to assist with this for both Avro and JSON formats.
 We recommend the Avro implementation due to its inbuilt support for schema evolution via the Confluent Schema Registry.
@@ -50,7 +50,7 @@ individual events and commands. We're using the recent extension to the schema r
 [multiple schemas registered under the same topic](https://www.confluent.io/blog/put-several-event-types-kafka-topic/)
 to support this pattern.
 
-```
+```java
 record PostCreated {
   string title;
   string body;
@@ -75,7 +75,7 @@ build tool you use (Maven, Gradle and sbt all have plugins) to generate code for
 
 You can also explicitly run `mvn generate-sources` to generate the Java serialization classes.
 
-## Schema Naming Strategy
+## Schema naming strategy
 
 The schema for every Avro serialized type is saved in the Confluent Schema registry. The Schema Registry supports two naming strategies:
 * Topic Record name Strategy - This creates a schema from the topic name and the fully qualified name of the Java class generated from the `.avdl` file.
@@ -86,9 +86,11 @@ It is also the only schema naming stategy supported by some of the plugins for K
 
 This behaviour is controlled by the `SchemaNameStrategy` in the `AvroGenericUtils.genericAvroSerde` helper method.
 
-## Json Serialization
+## Json serialization
 
-The `/examples/user` example app demonstrates how to create Serdes for your domain objects using Json serialization,
+Generating Serdes for Json serialization involves very little additional boiler plate on the part of the user.
+
+The [`/examples/user`](https://github.com/simplesourcing/simplesource-examples/tree/master/examples/user) example app demonstrates how to create Serdes for your domain objects using Json serialization,
 using the [Gson](https://github.com/google/gson) Json library.
 
-Please take a look at the example app for more details. 
+Please take a look at the [example](https://github.com/simplesourcing/simplesource-examples/blob/master/examples/user/src/main/java/io/simplesource/example/user/json/UserJsonRunner.java) for more details. 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Examples
+title: Example Projects
 permalink: examples.html
 ---
 
@@ -11,6 +11,8 @@ Sample code is available on Github in the [Simple Sourcing example repo](https:/
 A very simple example of creating and updating a user with a first and last name. 
 
 The complete code can be found in the Simple Sourcing example repo under [`examples/user`](https://github.com/simplesourcing/simplesource-examples/tree/master/examples/user).
+
+Comprehensive documentation of this example is [included here...]()
 
 # Auction
 

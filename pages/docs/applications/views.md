@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Materialized Views
+title: Creating Views
 permalink: views.html
 ---
 
 Creating read views involves consuming one or more of the projection topics and writing them to a database suitable for querying. 
+
+![Alt text](../../../images/event-sourcing-projections.png?raw=true "Projections")
 
 This is out of scope for Simple Sourcing, and it is up to the client to decide how to do this. 
 

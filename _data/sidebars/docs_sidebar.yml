@@ -8,36 +8,28 @@ entries:
   - title: Home
     output: web
     folderitems:
-    - title: Home
+    - title: Introduction
       output: web
       url: /docs_home.html
+    - title: Key Benefits
+      output: web
+      url: /key_benefits.html
+    - title: Quick Start
+      output: web
+      url: /quickstart.html
 
-  - title: Overview
+  - title: Concepts
     output: web
     folderitems:
       - title: Event Sourcing
         output: web
         url: /event_sourcing.html
+      - title: Key Concepts
+        output: web
+        url: /key_concepts.html
       - title: Design Overview
         output: web
         url: /design.html
-      - title: Concepts
-        output: web
-        url: /concepts.html
-
-  - title: Quick Start
-    output: web
-    folderitems:
-    - title: Quick Start
-      output: web
-      url: /quickstart.html
-
-  - title: Examples
-    output: web
-    folderitems:
-      - title: Examples
-        output: web
-        url: /examples.html
 
   - title: Project Setup
     output: web
@@ -49,47 +41,73 @@ entries:
         output: web
         url: /kafka.html
 
-  - title: Application Development
+  - title: Simple Sourcing API
     output: web
     folderitems:
       - title: API Overview
         output: web
-        url: /api.html
-      - title: Command API
+        url: /programming_model.html
+      - title: Aggregate API
         output: web
-        url: /command_api.html
+        url: /aggregate_api.html
       - title: Command Handlers
         output: web
         url: /commandhandlers.html
-      - title: Aggregators
+      - title: Event Handlers
         output: web
         url: /eventaggregators.html
-      - title: Aggregate Builders
-        output: web
-        url: /aggregate_builders.html
-      - title: Aggregate Sets
-        output: web
-        url: /aggregate_sets.html
       - title: Serialization
         output: web
         url: /serialization.html
-      - title: Materialized Views
-        output: web
-        url: /views.html
-      - title: Testing
+      - title: Testing the Implementation
         output: web
         url: /testing.html
+      - title: API Reference
+        output: web
+        url: /apidocs
+
+  - title: Creating Applications
+    output: web
+    folderitems:
+      - title: Architecture Overview
+        output: web
+        url: /architecture.html
+      - title: Assembling Aggregates
+        output: web
+        url: /aggregate_builders.html
+      - title: Building the Application
+        output: web
+        url: /application_builder.html
+      - title: Creating Views
+        output: web
+        url: /views.html
+
+  - title: Simple Sourcing Clients
+    output: web
+    folderitems:
+      - title: Building the Client
+        output: web
+        url: /client_builder.html
+      - title: Command API
+        output: web
+        url: /command_api.html
 
   - title: Deployment and Operations
     output: web
     folderitems:
-    - title: Deployment and Operations
+    - title: Kafka Deployment
       output: web
       url: /deployment.html
-
-  - title: Debugging and Monitoring
-    output: web
-    folderitems:
     - title: Debugging and Monitoring
       output: web
       url: /debugging.html
+
+  - title: Examples
+    output: web
+    folderitems:
+      - title: Example Projects
+        output: web
+        url: /examples.html
+      - title: Users Example in Detail
+        output: web
+        url: /users.html

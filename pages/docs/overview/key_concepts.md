@@ -1,8 +1,10 @@
 ---
 layout: page
-title: Concepts
-permalink: concepts.html
+title: Key Concepts
+permalink: key_concepts.html
 ---
+
+The following concepts are important for working with event sourcing with CQRS:
 
 ## Aggregates
 
