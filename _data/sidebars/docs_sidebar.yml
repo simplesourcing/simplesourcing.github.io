@@ -31,16 +31,6 @@ entries:
         output: web
         url: /design.html
 
-  - title: Project Setup
-    output: web
-    folderitems:
-      - title: IDE Setup
-        output: web
-        url: /ide.html
-      - title: Kafka Setup
-        output: web
-        url: /kafka.html
-
   - title: Simple Sourcing API
     output: web
     folderitems:
@@ -95,6 +85,9 @@ entries:
   - title: Deployment and Operations
     output: web
     folderitems:
+    - title: Development Environment Setup
+      output: web
+      url: /setup.html
     - title: Kafka Deployment
       output: web
       url: /deployment.html

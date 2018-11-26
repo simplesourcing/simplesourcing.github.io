@@ -34,6 +34,8 @@ git clone https://github.com/simplesourcing/simplesource-examples.git
 
 ## Local build and run
 
+For comprehensive information on local development setup, please visit the [setup page](/setup.html).
+
 ### Pre-requisites
 
 Ensure your local developer machine has the following tools installed 
@@ -42,18 +44,18 @@ Ensure your local developer machine has the following tools installed
    * [Maven 3.5.x](https://maven.apache.org/download.cgi)
    * [Docker](https://download.docker.com/mac/stable/Docker.dmg)
    
-#### Docker
+### Docker
 
 We have used Docker to allow developers to easily run a full suite of Kafka components locally.
 Docker isn't a requirement to use Simple Sourcing. We have found Docker provides 
 a productive development environment where software engineers each get their own independent
 test environment they can tear down and recreate in seconds.
 
-##### IntelliJ setup
+### IntelliJ setup
 
 If you choose to use IntelliJ as your IDE, make sure you have the Maven and Lombok plugins installed.
 
-### Running examples
+## Running examples
 
 Take a look in the [Example repo](https://github.com/simplesourcing/simplesource-examples) for some working examples of event sourcing systems using
 Simple Sourcing. 
@@ -67,7 +69,7 @@ Each example has the following structure
 
 Each of the example applications has one or more `Runner` classes with main methods to run simple tests of the included aggregate types. Run these from your IDE or from the command line using Maven
 
-#### User example (Avro)
+### User example (Avro)
 
 1. **Start the backend**
     
@@ -84,7 +86,7 @@ Each of the example applications has one or more `Runner` classes with main meth
     mvn install &&  mvn exec:java -Dexec.mainClass=io.simplesource.example.user.avro.UserAvroRunner
     ```
 
-#### Auction example
+### Auction example
 
 The dependencies and the front end run in Docker. The backend is run locally.
 
