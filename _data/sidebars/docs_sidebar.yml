@@ -78,6 +78,9 @@ entries:
       - title: Building the Application
         output: web
         url: /application_builder.html
+      - title: Creating Views
+        output: web
+        url: /views.html
 
   - title: Simple Sourcing Clients
     output: web
@@ -105,3 +108,6 @@ entries:
       - title: Example Projects
         output: web
         url: /examples.html
+      - title: Users Example in Detail
+        output: web
+        url: /users.html

@@ -50,7 +50,7 @@ individual events and commands. We're using the recent extension to the schema r
 [multiple schemas registered under the same topic](https://www.confluent.io/blog/put-several-event-types-kafka-topic/)
 to support this pattern.
 
-```
+```java
 record PostCreated {
   string title;
   string body;
@@ -75,7 +75,7 @@ build tool you use (Maven, Gradle and sbt all have plugins) to generate code for
 
 You can also explicitly run `mvn generate-sources` to generate the Java serialization classes.
 
-## Schema Naming Strategy
+## Schema naming strategy
 
 The schema for every Avro serialized type is saved in the Confluent Schema registry. The Schema Registry supports two naming strategies:
 * Topic Record name Strategy - This creates a schema from the topic name and the fully qualified name of the Java class generated from the `.avdl` file.
@@ -86,7 +86,7 @@ It is also the only schema naming stategy supported by some of the plugins for K
 
 This behaviour is controlled by the `SchemaNameStrategy` in the `AvroGenericUtils.genericAvroSerde` helper method.
 
-## Json Serialization
+## Json serialization
 
 Generating Serdes for Json serialization involves very little additional boiler plate on the part of the user.
 

@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Materialized Views
+title: Creating Views
 permalink: views.html
 ---
 
 Creating read views involves consuming one or more of the projection topics and writing them to a database suitable for querying. 
+
+![Alt text](../../../images/event-sourcing-projections.png?raw=true "Projections")
 
 This is out of scope for Simple Sourcing, and it is up to the client to decide how to do this. 
 
@@ -17,5 +19,3 @@ In the example app (`examples/auction`) we have provided an example of writing t
 using the [Kafka Connect MongoDB sink](https://www.confluent.io/connector/kafka-connect-mongodb-sink/)
 
 Please take a look at the example for more details.
-
-![Alt text](../../../images/event-sourcing-projections.png?raw=true "Projections")

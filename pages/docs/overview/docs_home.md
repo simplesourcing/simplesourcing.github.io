@@ -23,13 +23,13 @@ If you're new to either of these, there's some great introductory articles and t
 
 [Here are some of the key benefits](key_benefits.html) of using Simple Sourcing for building an event sourcing application using Kafka.
 
-## Getting Started
+## Getting started
 
 If you want to jump in straight away and see an example system running locally see the [Quick Start](quickstart.html)
 
 For more information on the design of the system see the [Design Overview](design.html)
 
-## Project Source
+## Project source
 
 Core repo: [https://github.com/simplesourcing/simplesource](https://github.com/simplesourcing/simplesource)
 

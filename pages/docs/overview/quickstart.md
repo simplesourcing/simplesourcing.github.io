@@ -12,7 +12,7 @@ Include dependencies in you build file:
 
 * Group ID: `io.simplesource`
 * Artifact ID: `simplesource-command-<module>`
-* Version: `?.?.?` - Latest version in Maven Central, as above.
+* Version: `?.?.?` - Latest version in Maven Central, as in above badge.
 
 Where `<module>` is one or more of:
 * `api` - core API (required)
@@ -23,12 +23,12 @@ Where `<module>` is one or more of:
 ## Getting the source
 
 #### [Core repo](https://github.com/simplesourcing/simplesource)
-```
+```bash
 git clone https://github.com/simplesourcing/simplesource.git
 ```
 
 #### [Example repo](https://github.com/simplesourcing/simplesource-examples)
-```
+```bash
 git clone https://github.com/simplesourcing/simplesource-examples.git
 ```
 
@@ -123,16 +123,3 @@ The dependencies and the front end run in Docker. The backend is run locally.
     ```
     
 1. Open a browser at [http://localhost:3000](http://localhost:3000)
-
-### Troubleshooting
-
-##### InvalidStateStoreException
-
-If when trying the example runners you see something like the following exception...
-
-```
-Exception in thread "main" java.lang.RuntimeException: java.util.concurrent.ExecutionException: org.apache.kafka.streams.errors.InvalidStateStoreException: The state store, commandResponseStore, may have migrated to another instance.
-```
-
-It means you have more than one instance of the application running locally using the same state directory. 
-Either run one at once locally, or ensure all local instances use different state store directories.

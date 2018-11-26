@@ -4,7 +4,7 @@ title: API Overview
 permalink: programming_model.html
 ---
 
-## Programming Model
+## Programming model
 
 Building an event sourcing application using Simple Sourcing involves the following steps:
 
@@ -30,6 +30,6 @@ A dedicated Scala DSL may be added in the future.
 
 As with Scala, it is easy and natural to use Simple Sourcing from a Kotlin application.
 
-## API Reference Documentation
+## API reference documentation
 
 Javadocs are available [here...](/apidocs)

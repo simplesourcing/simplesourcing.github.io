@@ -12,6 +12,8 @@ A very simple example of creating and updating a user with a first and last name
 
 The complete code can be found in the Simple Sourcing example repo under [`examples/user`](https://github.com/simplesourcing/simplesource-examples/tree/master/examples/user).
 
+Comprehensive documentation of this example is [included here...]()
+
 # Auction
 
 A more complex example of a auction application built with Simple Sourcing.

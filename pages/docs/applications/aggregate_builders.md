@@ -37,3 +37,4 @@ With this pattern, you provide a function that applies the build steps, and don'
 	        .withAggregator(UserEvent.getAggregator())
 	        .withCommandHandler(UserCommand.getCommandHandler())
  ```
+ 

@@ -36,7 +36,7 @@ CommandHandlerBuilder.<AccountKey, AccountCommand, AccountEvents.AccountEvent, O
 Here `doCreateAccount`, `doUpdateAccount` etc. are command handlers for individual accounts.
 
 
-### Best practices for Command Handlers
+### Best practices for command handlers
 
 1. It is recommended to do some sanity checking on command parameters prior to invoking the `CommandAPI`. E.g. testing for negative bounds.
 1. The command handler function must perform all validation required to ensure that the aggregate always has consistent state.

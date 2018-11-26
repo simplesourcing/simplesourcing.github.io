@@ -23,13 +23,13 @@ to define the docker containers that you want to run.
 
 To run these containers:
 
-```
+```bash
 $ docker-compose up
 ```
 
 Press Ctrl-C to stop the services. To stop and remove them:
 
-```
+```bash
 $ docker-compose down
 ```
 

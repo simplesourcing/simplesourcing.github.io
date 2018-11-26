@@ -8,11 +8,11 @@ The Simple Sourcing programming model is aggregate based. The most important des
 
 For each aggregate we need to implement command handlers, event handlers, and Serdes for serialisation.
 
-### Command Handlers
+### Command handlers
 
 [Command handlers](commandhandlers.html) are the mechanism for validating commands, and turning them into events.
 
-### Event Handlers
+### Event handlers
 
 [Events handlers](eventaggregators.html) are used to updated the aggregate state from the stream of events.
 
