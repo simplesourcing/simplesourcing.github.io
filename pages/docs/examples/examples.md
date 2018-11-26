@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Examples
+title: Example Projects
 permalink: examples.html
 ---
 

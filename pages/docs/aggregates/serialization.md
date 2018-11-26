@@ -4,11 +4,11 @@ title: Serialization
 permalink: serialization.html
 ---
 
-Any Kafka streams operation that writes to disk requires a [Serde](https://kafka.apache.org/11/javadoc/org/apache/kafka/common/serialization/Serde.html) 
+Any Kafka streams operation that writes to disk requires a [Serde](https://kafka.apache.org/21/javadoc/org/apache/kafka/common/serialization/Serde.html) 
 for each type that needs to be serialized.
 
-For each aggregate, a set of Serdes is required, and it the responsibility of the client to create these, 
-by providing an implementation of the `AggregateSerdes` interface.
+For each aggregate, a set of Serdes is required, and it the responsibility of the user to create these, 
+by providing an implementation of the [`AggregateSerdes`](/apidocs/io/simplesource/kafka/api/AggregateSerdes.html) interface. For the Simple Sourcing client, a simpler [`CommandSerdes`](/apidocs/io/simplesource/kafka/api/CommandSerdes.html) implementation must be provided.
 
 Simple Sourcing provides some utilities to assist with this for both Avro and JSON formats.
 We recommend the Avro implementation due to its inbuilt support for schema evolution via the Confluent Schema Registry.
@@ -88,7 +88,9 @@ This behaviour is controlled by the `SchemaNameStrategy` in the `AvroGenericUtil
 
 ## Json Serialization
 
-The `/examples/user` example app demonstrates how to create Serdes for your domain objects using Json serialization,
+Generating Serdes for Json serialization involves very little additional boiler plate on the part of the user.
+
+The [`/examples/user`](https://github.com/simplesourcing/simplesource-examples/tree/master/examples/user) example app demonstrates how to create Serdes for your domain objects using Json serialization,
 using the [Gson](https://github.com/google/gson) Json library.
 
-Please take a look at the example app for more details. 
+Please take a look at the [example](https://github.com/simplesourcing/simplesource-examples/blob/master/examples/user/src/main/java/io/simplesource/example/user/json/UserJsonRunner.java) for more details. 

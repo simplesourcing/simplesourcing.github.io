@@ -17,3 +17,5 @@ In the example app (`examples/auction`) we have provided an example of writing t
 using the [Kafka Connect MongoDB sink](https://www.confluent.io/connector/kafka-connect-mongodb-sink/)
 
 Please take a look at the example for more details.
+
+![Alt text](../../../images/event-sourcing-projections.png?raw=true "Projections")

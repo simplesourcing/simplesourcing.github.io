@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Introduction to Event Sourcing and CQRS
+title: Event Sourcing and CQRS
 permalink: event_sourcing.html
 ---
 
@@ -39,7 +39,7 @@ the write subsystem to publish changes to an event log,
 and the query subsystem to materialize the views it requires by applying these changes.
 
 #### Further reading
-   * [Concepts](concepts.md) - glossary of key concepts
+   * [Concepts](key_concepts.html) - glossary of key concepts
    
 {% include_relative further_reading.md %}
  

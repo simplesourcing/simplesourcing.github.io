@@ -7,7 +7,7 @@ permalink: command_api.html
 A `CommandAPISet` provides a `CommandAPI` for each of the aggregates added. The `CommandAPI` has methods to publish commands,
 and wait for the result to these commands.
 
-The `CommandAPISet` is created upon [starting the application](aggregate_sets.html)
+The `CommandAPISet` is created by the [client builder](client_builder.html).
 
 Note that result of the command only will only be whether the command succeeded or failed:
 * If successful, the command sequence number

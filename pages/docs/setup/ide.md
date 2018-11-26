@@ -4,9 +4,9 @@ title: IDE Setup
 permalink: ide.html
 ---
 
-## Intellij
+## Intellij IDEA
 
-Download and install Intellij from http://jetbrains.com/idea/download
+Download and install Intellij IDEA from [http://jetbrains.com/idea/download](http://jetbrains.com/idea/download)
 
 Install the Lombok and Maven plugins. They can be found under Preferences ->
 Plugins -> Browse Repositories.

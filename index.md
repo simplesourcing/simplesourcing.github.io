@@ -38,7 +38,7 @@ permalink: index.html
         <div class="col-sm-4">
             <h1 class="text-center"><i class="api" aria-hidden="true"></i></h1>
             <h3 class="text-center">Small clean API</h3>
-            <p>We have put a lot of effort into a very small clean API so it is quick to learn and start using. Read more about the <a href="api.html">API here</a></p>
+            <p>We have put a lot of effort into a very small clean API so it is quick to learn and start using. Read more about the <a href="programming_model.html">API here</a></p>
         </div>
         <div class="col-sm-4">
             <h1 class="text-center"><i class="read-only" aria-hidden="true"></i></h1>

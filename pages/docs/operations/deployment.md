@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Deployment and Operations
+title: Kafka Deployment
 permalink: deployment.html
 ---
 
