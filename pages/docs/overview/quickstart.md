@@ -97,11 +97,21 @@ The dependencies and the front end run in Docker. The backend is run locally.
     docker-compose up
     ```
 
+    Make sure that you can resolve `broker`, `mongo`, and `schema_registry` as
+    `127.0.0.1`.
+
 1. **Starting the backend**
     
     ```bash
     cd examples/auction
-    ./run.sh
+    ./runApp.sh
+    ```
+
+1. **Starting the streams application**
+
+    ````
+    cd examples/auction
+    ./runStreams.sh
     ```
 
 1. **Starting the front end** 
