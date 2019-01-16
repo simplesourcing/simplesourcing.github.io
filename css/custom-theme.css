@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Titillium+Web:300,400,700');
+@import url('https://rsms.me/inter/inter-ui.css');
 
 body {
-    background-color: white;
-    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    background-color: #292929;
+    font-family: 'Inter UI', sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
 .h1,
@@ -17,42 +20,172 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Titillium Web', sans-serif;
     font-weight: 400;
     line-height: 1.1;
-    color: inherit
+    color: #fe9e00;
 }
 
+a {
+    color: #ffffff;
+    text-decoration: underline
+}
 
+a:hover,
+a:focus,
+.anchorjs-link:hover  {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.bg-circle,
+.bg-angle {
+    position: absolute;
+    top: 0; right: auto; bottom: auto; left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.bg-circle {
+    top: -50px; right: -50px; left: auto;
+}
+.bg-circle.large {
+    width: 50%;
+    height: auto;
+    top: -25%; right: -15%;
+}
+.bg-angle.large {
+    width: 60%;
+    height: auto;
+}
+
+.navbar-collapse {
+    box-shadow: none !important;
+}
 
 .navbar-inverse {
-    background-color: rgba(255, 255, 255, 0.85);
-    height: 100px;
+    background-color: transparent;
     border: none;
 }
 
-.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
-    color: #00489D;
-}
-
-.navbar-inverse .navbar-nav>li>a:hover, a.fa.fa-home.fa-lg.navbar-brand:hover {
-    color: #1C85FF;
+.navbar-inverse .navbar-collapse {
+    display: none !important;
 }
 
 .navbar-inverse .navbar-brand:before {
+    display: none;
     vertical-align: middle;
     content: ' ';
-    display: inline-block;
     width: 25px;
     height: 25px;
+    color: #ffffff;
     background-image: url('../images/logoMark_stack_simpleSourcing.svg');
     background-repeat: no-repeat;
 }
 
+.navbar-inverse .navbar-nav > li > a {
+    color: #888888;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-transition: color 0.25s ease-out;
+    -moz-transition: color 0.25s ease-out;
+    -ms-transition: color 0.25s ease-out;
+    -o-transition: color 0.25s ease-out;
+    transition: color 0.25s ease-out;
+}
+.landing .navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 0;
+}
+
+.navbar-inverse .navbar-nav > li > a[href^="http://"],
+.navbar-inverse .navbar-nav > li > a[href^="https://"] {
+    margin-top: 0;
+    padding: 14px 25px;
+    background-color: #000000;
+    border-radius: 9px;
+}
+
+.navbar-inverse .navbar-toggle,
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+#search-demo-container,
+#search-demo-container a {
+    color: #000000 !important;
+}
+
+.sidebarTitle {
+    display: none !important;
+}
+
+#mysidebar.nav li a,
+#mysidebar.nav li a:hover,
+#mysidebar.nav li a:focus,
+#mysidebar.nav ul li a,
+#mysidebar.nav li.active > a {
+    border-top: none;
+    color: #ededed;
+    background-color: transparent;
+}
+#mysidebar.nav li > ul {
+    margin-left: 20px;
+}
+
+#mysidebar.nav li a:hover,
+#mysidebar.nav li a:focus,
+#mysidebar.nav li.active > a {
+    color: #ffffff;
+}
+#mysidebar.nav li.active > a {
+    font-weight: bold;
+}
+
+#mysidebar.nav > li.active > a:before {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 9px 0;
+    background-image: url('../images/circle-green.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#mysidebar.nav li > a > span:after {
+    content: '\25be';
+}
+#mysidebar.nav li.active > a > span:after {
+    content: '\25b4';
+}
+
 span.projectTitle {
     vertical-align: middle;
-    font-family: 'Titillium Web', sans-serif;
     display: inline-block;
+}
+.projectSubtitle {
+    display: none;
+    font-size: 22px;
 }
 
 .container.topnavlinks {
@@ -60,36 +193,29 @@ span.projectTitle {
 }
 
 .hero {
-    background-image: url("../images/Light%20Image%20Group@2x.jpg");
-    background-size: cover;
-    background-color: 002A5B;
-    margin-top: -120px;
-    padding-top: 130px;
-    padding-bottom: 10rem;
-    text-align: left;
-    margin-bottom: 6rem;
+    margin-bottom: 25px;
 }
 
 .hero h1 {
     font-size: 7rem;
-    margin-bottom: 25px;
-}
-
-.hero h1 strong {
-    color: #00489D;
+    margin-bottom: 50px;
+    color: #ffffff;
 }
 
 .hero .btn-lg {
-    font-size: 2.25rem;
-    font-weight: 200;
-    -webkit-border-radius: 200px;
-    border-radius: 200px;
+    font-size: 22px;
+    font-weight: bold;
+    -webkit-border-radius: 14px;
+    border-radius: 14px;
     padding: 18px 46px;
     vertical-align: middle;
+    text-decoration: none;
 }
 
-.hero .btn-primary {
-    background-color: #00489D;
+.hero .btn-primary,
+.hero .btn-primary:hover {
+    background-color: #000000;
+    border-color: #000000;
     
     -webkit-transition: background 0.25s ease-out;
     -moz-transition: background 0.25s ease-out;
@@ -99,18 +225,13 @@ span.projectTitle {
 }
 
 .hero .btn-primary:hover {
-    background-color: #1C85FF;
+    background-color: #000000;
+    border-color: #000000;
 }
 
 .hero .btn i {
-    content: " ";
     display: inline-block;
-    width: 38px;
-    height: 32px;
-    margin-right: 5px;
-    background-image: url('../images/ico_Documentation.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
+    margin-left: 15px;
     vertical-align: middle;
 }
 
@@ -122,10 +243,10 @@ span.projectTitle {
 
 
 p.intro {
-    font-family: 'Titillium Web', sans-serif;
     font-size: 2rem;
     font-weight: 200;
     line-height: 3.5rem;
+    margin-bottom: 30px;
 }
 
 .row.callout {
@@ -175,17 +296,37 @@ p.intro {
 }
 
 footer {
-    font-family: 'Titillium Web', sans-serif;
-    background-color: #002A5B;
     margin: 0;
-    padding: 50px 0;
+    padding: 100px;
     color: white;
+    background-image: url('../images/foooter-bg-angle.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
 }
 
 footer span.brandtext {
     font-size: 1.15rem;
     letter-spacing: 1.2px;
-    display: block;
     text-transform: uppercase;
-    margin-bottom: 8px;
+}
+
+code.highlighter-rouge {
+    color: #73d3e4;
+    background-color: #000000;
+}
+
+a code.highlighter-rouge {
+    text-decoration: underline;
+}
+a:hover code.highlighter-rouge,
+a:focus code.highlighter-rouge {
+    text-decoration: none;
+}
+
+@media (min-width: 992px) {
+    .navbar-inverse .navbar-collapse,
+    .projectSubtitle {
+        display: block !important;
+    }
 }

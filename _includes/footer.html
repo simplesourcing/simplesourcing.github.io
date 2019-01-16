@@ -2,12 +2,12 @@
     <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <span class="brandtext">Powered by</span>
-                    <img src="../images/Logo_Horizontal_Wht.svg">
+                    &copy;{{ site.time | date: "%Y"  }} {{site.company_name}}. All rights reserved. <br />
+                    {% if page.last_updated %}<span>Page last updated:</span> {{page.last_updated}}<br/>{% endif %} Site last generated: {{ site.time | date: "%b %-d, %Y"  }}
                 </div>
                 <div class="col-lg-6 footer">
-               &copy;{{ site.time | date: "%Y"  }} {{site.company_name}}. All rights reserved. <br />
-{% if page.last_updated %}<span>Page last updated:</span> {{page.last_updated}}<br/>{% endif %} Site last generated: {{ site.time | date: "%b %-d, %Y"  }}
+                    <span class="brandtext">Powered by</span>
+                    <img src="../images/Logo_Horizontal_Wht.svg">
                 </div>
             </div>
     </div>

@@ -3,6 +3,8 @@
 topnav:
 - title: Topnav
   items:
+  - title: Home
+    url: index.html
   - title: Documentation
     url: docs_home.html
   - title: GitHub
