@@ -1,13 +1,19 @@
 @import url('https://rsms.me/inter/inter-ui.css');
 
+/* general */
 body {
     position: relative;
-    background-color: #292929;
     font-family: 'Inter UI', sans-serif;
     color: #ffffff;
+    background-color: #292929;
     overflow-x: hidden;
 }
-
+p {
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 1.63;
+    letter-spacing: 0.03rem;
+}
 .h1,
 .h2,
 .h3,
@@ -20,23 +26,49 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 400;
-    line-height: 1.1;
+    font-weight: 600;
+    line-height: normal;
     color: #fe9e00;
 }
-
+.h1,
+.h2,
+.h3,
+h1,
+h2,
+h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.h1,
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: -0.04rem;
+}
 a {
     color: #ffffff;
     text-decoration: underline
 }
-
 a:hover,
 a:focus,
 .anchorjs-link:hover  {
     color: #ffffff;
     text-decoration: none;
 }
+@media (min-width: 768px) {
+    p {
+        font-size: 1.7rem;
+        line-height: 1.71;
+    }
+    .h1,
+    h1 {
+        font-size: 3.8rem;
+        letter-spacing: -0.04rem;
+        margin-bottom: 40px;
+    }
+}
+/* /general */
 
+/* header background */
 .bg-circle,
 .bg-angle {
     position: absolute;
@@ -49,28 +81,36 @@ a:focus,
     top: -50px; right: -50px; left: auto;
 }
 .bg-circle.large {
-    width: 50%;
-    height: auto;
-    top: -25%; right: -15%;
-}
-.bg-angle.large {
     width: 60%;
     height: auto;
+    top: 2%; right: -30%;
 }
+.bg-angle.large {
+    width: 100%;
+    height: auto;
+}
+@media (min-width: 768px) {
+    .bg-circle.large {
+        width: 50%;
+        top: -25%; right: -15%;
+    }
+    .bg-angle.large {
+        width: 60%;
+    }
+}
+/* /header background */
 
+/* navbar */
 .navbar-collapse {
     box-shadow: none !important;
 }
-
 .navbar-inverse {
     background-color: transparent;
     border: none;
 }
-
 .navbar-inverse .navbar-collapse {
     display: none !important;
 }
-
 .navbar-inverse .navbar-brand:before {
     display: none;
     vertical-align: middle;
@@ -81,7 +121,6 @@ a:focus,
     background-image: url('../images/logoMark_stack_simpleSourcing.svg');
     background-repeat: no-repeat;
 }
-
 .navbar-inverse .navbar-nav > li > a {
     color: #888888;
     font-size: 18px;
@@ -101,7 +140,6 @@ a:focus,
 .navbar-inverse .navbar-nav > li > a:focus {
     color: #ffffff;
 }
-
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
@@ -110,31 +148,120 @@ a:focus,
     border-bottom: 2px solid #ffffff;
     border-radius: 0;
 }
-
 .navbar-inverse .navbar-nav > li > a[href^="http://"],
 .navbar-inverse .navbar-nav > li > a[href^="https://"] {
     margin-top: 0;
     padding: 14px 25px;
-    background-color: #000000;
+    background-color: #141414;
     border-radius: 9px;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -ms-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
 }
-
+.navbar-inverse .navbar-nav > li > a[href^="http://"]:hover,
+.navbar-inverse .navbar-nav > li > a[href^="http://"]:focus,
+.navbar-inverse .navbar-nav > li > a[href^="https://"]:hover,
+.navbar-inverse .navbar-nav > li > a[href^="https://"]:focus {
+    background-color: #000000;
+}
 .navbar-inverse .navbar-toggle,
 .navbar-inverse .navbar-toggle:focus,
 .navbar-inverse .navbar-toggle:hover {
-    background-color: #000000;
-    border-color: #000000;
+    background-color: transparent;
+    border: none;
 }
-
 #search-demo-container,
 #search-demo-container a {
     color: #000000 !important;
 }
+@media (min-width: 992px) {
+    .navbar-inverse {
+        margin-bottom: 60px;
+    }
+    .navbar-inverse .navbar-collapse {
+        display: block !important;
+    }
+}
+/* /navbar */
 
+/* hero */
+.hero {
+    position: relative;
+}
+.hero h1 {
+    font-size: 4.6rem;
+    line-height: 1.22;
+    font-weight: normal;
+    letter-spacing: -0.21rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+.hero .intro {
+    font-size: 1.5rem;
+    line-height: 1.67;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+.hero .btn {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 20px 0;
+    margin-bottom: 18px;
+    text-decoration: none;
+    background: #141414;
+    border: none;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-transition: background-color 0.25s ease-out;
+    -moz-transition: background-color 0.25s ease-out;
+    -ms-transition: background-color 0.25s ease-out;
+    -o-transition: background-color 0.25s ease-out;
+    transition: background-color 0.25s ease-out;
+}
+.hero .btn:hover,
+.hero .btn:focus {
+    background-color: #000000;
+}
+.hero .btn i {
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 7.6rem;
+        letter-spacing: -0.43rem;
+    }
+    .hero h1 strong {
+        font-weight: normal;
+    }
+    .hero .intro {
+        font-size: 2.5rem;
+        line-height: 1.52;
+        margin-bottom: 60px;
+    }
+    .hero .btn {
+        display: inline-block;
+        font-size: 2.2rem;
+        padding: 30px 80px;
+        vertical-align: middle;
+        -webkit-border-radius: 14px;
+        border-radius: 14px;
+    }
+    .hero .btn i {
+        font-size: 3rem;
+    }
+}
+/* /hero */
+
+/* sidebar nav */
 .sidebarTitle {
     display: none !important;
 }
-
 #mysidebar.nav li a,
 #mysidebar.nav li a:hover,
 #mysidebar.nav li a:focus,
@@ -147,7 +274,6 @@ a:focus,
 #mysidebar.nav li > ul {
     margin-left: 20px;
 }
-
 #mysidebar.nav li a:hover,
 #mysidebar.nav li a:focus,
 #mysidebar.nav li.active > a {
@@ -156,7 +282,6 @@ a:focus,
 #mysidebar.nav li.active > a {
     font-weight: bold;
 }
-
 #mysidebar.nav > li.active > a:before {
     display: inline-block;
     position: absolute;
@@ -171,15 +296,15 @@ a:focus,
     background-position: center;
     background-size: cover;
 }
-
 #mysidebar.nav li > a > span:after {
     content: '\25be';
 }
 #mysidebar.nav li.active > a > span:after {
     content: '\25b4';
 }
+/* /sidebar nav */
 
-span.projectTitle {
+.projectTitle {
     vertical-align: middle;
     display: inline-block;
 }
@@ -187,52 +312,14 @@ span.projectTitle {
     display: none;
     font-size: 22px;
 }
+@media (min-width: 992px) {
+    .projectSubtitle {
+        display: block !important;
+    }
+}
 
 .container.topnavlinks {
     padding-top: 23px;
-}
-
-.hero {
-    margin-bottom: 25px;
-}
-
-.hero h1 {
-    font-size: 7rem;
-    margin-bottom: 50px;
-    color: #ffffff;
-}
-
-.hero .btn-lg {
-    font-size: 22px;
-    font-weight: bold;
-    -webkit-border-radius: 14px;
-    border-radius: 14px;
-    padding: 18px 46px;
-    vertical-align: middle;
-    text-decoration: none;
-}
-
-.hero .btn-primary,
-.hero .btn-primary:hover {
-    background-color: #000000;
-    border-color: #000000;
-    
-    -webkit-transition: background 0.25s ease-out;
-    -moz-transition: background 0.25s ease-out;
-    -ms-transition: background 0.25s ease-out;
-    -o-transition: background 0.25s ease-out;
-    transition: background 0.25s ease-out;
-}
-
-.hero .btn-primary:hover {
-    background-color: #000000;
-    border-color: #000000;
-}
-
-.hero .btn i {
-    display: inline-block;
-    margin-left: 15px;
-    vertical-align: middle;
 }
 
 .main-text h2 {
@@ -241,17 +328,9 @@ span.projectTitle {
     margin-bottom: 2rem;
 }
 
-
-p.intro {
-    font-size: 2rem;
-    font-weight: 200;
-    line-height: 3.5rem;
-    margin-bottom: 30px;
-}
-
 .row.callout {
     text-align: center;
-    margin: 5rem 0;
+    margin: 6rem 0;
 }
 
 .row.callout h1 {
@@ -307,15 +386,18 @@ footer {
 
 footer span.brandtext {
     font-size: 1.15rem;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.12rem;
     text-transform: uppercase;
 }
 
+/* content */
+h1.post-title-main {
+    margin-top: 0;
+}
 code.highlighter-rouge {
     color: #73d3e4;
     background-color: #000000;
 }
-
 a code.highlighter-rouge {
     text-decoration: underline;
 }
@@ -323,10 +405,4 @@ a:hover code.highlighter-rouge,
 a:focus code.highlighter-rouge {
     text-decoration: none;
 }
-
-@media (min-width: 992px) {
-    .navbar-inverse .navbar-collapse,
-    .projectSubtitle {
-        display: block !important;
-    }
-}
+/* /content */
