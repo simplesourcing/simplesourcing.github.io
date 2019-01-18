@@ -934,7 +934,7 @@ a[href^="http://"]:after, a[href^="https://"]:after {
     font-style: normal;
     display: inline-block;
     text-decoration: none;
-    padding-left: 3px;
+    padding-left: 0.4em;
 }
 
 /* Strip the outbound icon when this class is present */
