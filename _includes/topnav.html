@@ -12,7 +12,7 @@
                 <span class="projectTitle"><img src="images/logo.svg" alt="{{site.topnav_title}}" /></span>
             </a>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <!-- toggle sidebar button -->
                 {% if site.toggle_sidebar_button == true %}
@@ -79,6 +79,7 @@
                     <!--end search-->
                 </li>
             </ul>
+            {% include sidebar.html %}
         </div>
         {% unless page.url contains "index.html" %}
         <div class="projectSubtitle">A Java Library for <b>Event Sourcing using Kafka</b></div>

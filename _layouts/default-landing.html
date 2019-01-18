@@ -3,38 +3,6 @@
 <head>
     {% include head.html %}
     <script>
-        $(document).ready(function() {
-            // Initialize navgoco with default options
-            $("#mysidebar").navgoco({
-                caretHtml: '',
-                accordion: true,
-                openClass: 'active', // open
-                save: false, // leave false or nav highlighting doesn't work right
-                cookie: {
-                    name: 'navgoco',
-                    expires: false,
-                    path: '/'
-                },
-                slide: {
-                    duration: 400,
-                    easing: 'swing'
-                }
-            });
-
-            $("#collapseAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', false);
-            });
-
-            $("#expandAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', true);
-            });
-
-        });
-
-    </script>
-    <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
@@ -72,9 +40,10 @@
     {% endif %}
 
 </head>
-<body class="landing">
-<image src="images/bg-angle.svg" class="bg-angle large" />
-<image src="images/bg-circle.svg" class="bg-circle large" />
+<body class="page-home">
+<div class="container-outer">
+<image src="images/bg-angle.svg" class="bg-angle" />
+<image src="images/bg-circle.svg" class="bg-circle" />
 {% include topnav.html %}
 {% include hero.html %}
 <!-- Page Content -->
@@ -100,9 +69,11 @@
 <!-- /.container -->
 </div>
 <!-- /#main -->
-    </div>
+</div>
 
 {% include footer.html %}
+</div>
+<!-- /.container-outer -->
 </body>
 {% if site.google_analytics %}
 {% include google_analytics.html %}
