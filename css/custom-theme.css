@@ -451,6 +451,12 @@ a:hover code.highlighter-rouge,
 a:focus code.highlighter-rouge {
     text-decoration: none;
 }
+.highlight,
+pre code {
+    background-color: #000000;
+    border: none;
+    border-radius: 4px;
+}
 /* /documentation */
 
 /* footer */
