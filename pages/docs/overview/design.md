@@ -15,7 +15,7 @@ generate one or more events and write them to the event log, and update the aggr
 in a single atomic operation.
 It also ensures that all events are written in the same order as the commands are received.
 
-![Event Sourcing with CQRS](/images/simple-sourcing.png)
+![Event Sourcing with CQRS](/images/simple-sourcing-diagram.png)
 
 In the CQRS model implemented by Simple Sourcing, clients are able to submit **commands** to perform an action
 against **aggregates** each identified by a unique key.

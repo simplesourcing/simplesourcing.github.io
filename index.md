@@ -12,7 +12,7 @@ permalink: index.html
             <h1 class="text-center">A Java library for Event Sourcing</h1>
             <p class="text-center"><a href="docs_home.html" class="btn btn-primary">View Documentation</a></p>
         </div>
-    </div>-->
+    </div>
 
     <div class="row">
         <div class="col-md-6 main-text">
@@ -26,8 +26,7 @@ permalink: index.html
             <p hidden>TODO: Draw this ourselves:</p>
             <img style="width:50%;height:50%;" src="https://www.confluent.io/wp-content/uploads/2016/09/Event-sourced-based-architecture.jpeg">
         </div>
-    </div>
-
+    </div> -->
 
     <div class="row callout">
         <div class="col-sm-4">
