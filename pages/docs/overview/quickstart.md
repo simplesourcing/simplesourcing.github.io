@@ -109,7 +109,7 @@ The dependencies and the front end run in Docker. The backend is run locally.
 
 1. **Starting the streams application**
 
-    ````
+    ```bash
     cd examples/auction
     ./runStreams.sh
     ```
