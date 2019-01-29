@@ -15,7 +15,7 @@ Building an event sourcing application using Simple Sourcing involves the follow
 
 ## Language choice
 
-Simple Sourcing is witten in Java. Simple Sourcing applications can be implemented inand used from any JVM language.
+Simple Sourcing is witten in Java. Simple Sourcing applications can be implemented in and used from any JVM language.
 
 ### Scala
 
