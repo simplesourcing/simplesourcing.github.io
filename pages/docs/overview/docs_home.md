@@ -38,5 +38,5 @@ Examples: [https://github.com/simplesourcing/simplesource-examples](https://gith
 
 ## Background reading
 
-   * [Event Sourcing and CQRS](overview/event_sourcing.md) - a brief description of these concepts
+   * [Event Sourcing and CQRS](event_sourcing.html) - a brief description of these concepts
 {% include_relative further_reading.md %}
