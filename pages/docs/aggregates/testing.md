@@ -14,7 +14,7 @@ test tool to run the same topology used by the Simple Sourcing production code i
 publication of commands and making assertions about the inner state of the event sourcing library
 after each command. 
 It also provides a simple mechanism to validate the correct event and aggregate state changes
-occurr as a result of each command.
+occur as a result of each command.
 
 An example is given below. We insert a new user then update their name. 
 In each case we provide the expected events and projection state.
@@ -43,7 +43,7 @@ testHelper.publishCommand(
 
 There is also a variation of the `thenPublish` method where you provide a function
 that takes the last projection value and sequence and produces a new command with your own provided sequence id.
-This is useful when you're testing error scenarios. Below we're creating a new user then sending an update command
+This is useful when you're testing error scenarios. Below we're creating a new user then we're sending an update command
 with an invalid sequence id. 
 We indicate we expect an error providing the expected failure reason.
 

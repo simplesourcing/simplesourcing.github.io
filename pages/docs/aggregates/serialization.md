@@ -13,7 +13,7 @@ by providing an implementation of the [`AggregateSerdes`](/apidocs/io/simplesour
 Simple Sourcing provides some utilities to assist with this for both Avro and JSON formats.
 We recommend the Avro implementation due to its inbuilt support for schema evolution via the Confluent Schema Registry.
 
-Unfortunately there is still some unavoidable boiler plate code required to set up the Serdes.
+Unfortunately, there is still some unavoidable boilerplate code required to set up the Serdes.
 
 The user example project includes several different configurations you can use as a template when setting up
 your own project.
@@ -22,11 +22,11 @@ your own project.
 
 These are the steps required to create a single Avro Serde, as a summary:
 
-1. Create your domain class definition. This is the type you work with in your Simple Sourcing or KStream code.
+1. Create your domain class definition. This is the type you work within your Simple Sourcing or KStream code.
 1. Create the Avro schema file (`.avdl` files) to represent the Avro schema for the class.
 1. Run the Maven goal `generate-sources` to generate Java files for the `.avdl`. Note that these generated classes will be subclasses of Avro `GenericObject`.
   
-   Ths step happens automatically when you run `mvn install`.
+   This step happens automatically when you run `mvn install`.
 1. Create a `GenericMapper` that maps your domain object to the auto-generated Avro Java object. 
 1. Create an instance of `Serde<GenericRecord>`. The underlying implementation for this Serde is provided by Confluent. We can create it with `AvroGenericUtils.genericAvroSerde`, passing in the necessary
 configuration for the Schema Registry.
@@ -45,7 +45,7 @@ We recommend using the Avro IDL to define your objects as it provides a more con
 To get started, check out the [Avro reference documentation](https://avro.apache.org/docs/1.8.1/idl.html) and
 take a look at [user.avdl](/examples/user/src/main/avro/user.avdl) from the included example projects.
 
-You can have as many types as you like for events and commands. You don't need to  using a union type to represent your
+You can have as many types as you like for events and commands. You don't need to  use a union type to represent your
 individual events and commands. We're using the recent extension to the schema registry for
 [multiple schemas registered under the same topic](https://www.confluent.io/blog/put-several-event-types-kafka-topic/)
 to support this pattern.
@@ -82,13 +82,13 @@ The schema for every Avro serialized type is saved in the Confluent Schema regis
 This schema naming strategy must be used for Events and Commands, where different types of events and commands appear in the same topic.
 * Topic Name Strategy - This schema strategy uses only the topic name for the schema name. 
 It will not work for commands and events, but is fine for aggregates and other `KTable` based projections, which are typically monomorphic. 
-It is also the only schema naming stategy supported by some of the plugins for Kafka Connect.
+It is also the only schema naming strategy supported by some of the plugins for Kafka Connect.
 
-This behaviour is controlled by the `SchemaNameStrategy` in the `AvroGenericUtils.genericAvroSerde` helper method.
+This behavior is controlled by the `SchemaNameStrategy` in the `AvroGenericUtils.genericAvroSerde` helper method.
 
 ## Json serialization
 
-Generating Serdes for Json serialization involves very little additional boiler plate on the part of the user.
+Generating Serdes for Json serialization involves very little additional boilerplate on the part of the user.
 
 The [`/examples/user`](https://github.com/simplesourcing/simplesource-examples/tree/master/examples/user) example app demonstrates how to create Serdes for your domain objects using Json serialization,
 using the [Gson](https://github.com/google/gson) Json library.

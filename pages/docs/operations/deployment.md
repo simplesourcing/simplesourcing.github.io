@@ -48,7 +48,7 @@ docker-compose exec schema_registry kafka-avro-console-consumer \
   --topic simple-events
 ```
 
-If using text based encodings like JSON you can use
+If using text-based encodings like JSON you can use
 ```bash
 docker-compose exec broker kafka-console-consumer \
   --bootstrap-server broker:9092 \

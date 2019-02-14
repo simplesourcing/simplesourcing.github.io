@@ -5,7 +5,7 @@ permalink: application_builder.html
 ---
 
 The entry point into a Simple Sourcing application is the `EventSourcedApp` DSL. With this you can:
-* Set the Kafka for configuration to specifiy how to interact with the Kafka cluster
+* Set the Kafka for configuration to specify how to interact with the Kafka cluster
 * Add one or more [aggregates](aggregate_builders.html) and wire in and their associated [command and event handlers](aggregate_api.html)
 * Call the `start` method which starts the application
 

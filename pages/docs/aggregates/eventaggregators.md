@@ -46,4 +46,4 @@ Some best practices need to be followed to implement the aggregator correctly:
 It should rather do a deep copy of the passed aggregate, apply the event and return this altered aggregate.
 * `Non-blocking`: The event aggregator is part of a Kafka transaction which has a timeout. So if the aggregator function 
 takes longer than expected, this might cause rebalanced and instability to the whole Simple Sourcing.
-Any blocking operation should be be implemented as a separate client which reads from the generated Simple Sourcing events topic
+Any blocking operation should be implemented as a separate client which reads from the generated Simple Sourcing events topic

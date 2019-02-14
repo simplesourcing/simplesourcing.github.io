@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Agregate API Overview
+title: Aggregate API Overview
 permalink: aggregate_api.html
 ---
 
 The Simple Sourcing programming model is aggregate based. The most important design decision is determining what these aggregates are, and the commands and events that related to them. As events are immutable, any events that are generated must be supported throughout the life of the application. 
 
-For each aggregate we need to implement command handlers, event handlers, and Serdes for serialisation.
+For each aggregate we need to implement command handlers, event handlers, and Serdes for serialization.
 
 ### Command handlers
 
@@ -14,7 +14,7 @@ For each aggregate we need to implement command handlers, event handlers, and Se
 
 ### Event handlers
 
-[Events handlers](eventaggregators.html) are used to updated the aggregate state from the stream of events.
+[Events handlers](eventaggregators.html) are used to update the aggregate state from the stream of events.
 
 ### Serde
 

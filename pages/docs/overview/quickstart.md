@@ -8,7 +8,7 @@ permalink: quickstart.html
 
 ![](https://maven-badges.herokuapp.com/maven-central/io.simplesource/simplesource-command-api/badge.svg)
 
-Include dependencies in you build file:
+Include dependencies in your build file:
 
 * Group ID: `io.simplesource`
 * Artifact ID: `simplesource-command-<module>`

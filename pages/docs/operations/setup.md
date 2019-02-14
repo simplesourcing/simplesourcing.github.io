@@ -8,7 +8,7 @@ permalink: setup.html
 
 ### Intellij IDEA
 
-Download and install Intellij IDEA from [http://jetbrains.com/idea/download](http://jetbrains.com/idea/download)
+Download and install IntelliJ IDEA from [http://jetbrains.com/idea/download](http://jetbrains.com/idea/download)
 
 Install the Lombok and Maven plugins. They can be found under Preferences ->
 Plugins -> Browse Repositories.
@@ -31,7 +31,7 @@ A typical Kafka Docker Compose stack consists of the following container instanc
 * One or more instances of a Kafka broker
 * An instance of the [Confluent Schema Registry](https://www.confluent.io/confluent-schema-registry/) if you are using Avro to serialize the messages on Kafka
 
-In addtion you may also want to include a [Kafka Connect]() instance if your development includes streaming to a projection database or search eangine. 
+In addition you may also want to include a [Kafka Connect]() instance if your development includes streaming to a projection database or search engine. 
 
 Once you have installed Docker, create a `docker-compose.yml` file
 to define the docker containers that you want to run. 

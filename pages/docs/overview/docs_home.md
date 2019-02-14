@@ -8,7 +8,7 @@ sidebar: docs_sidebar
 Simple Sourcing is an API for building event sourcing systems where Kafka is used as the primary data store and System of record.
 
 Simple Sourcing has specifically kept its footprint small and looks to solve a very focused problem. 
-It is not meant to be a full blown digital platform, for this there a a number of existing platforms that meet those needs well. 
+It is not meant to be a full-blown digital platform, for this there is a number of existing platforms that meet those needs well. 
 Instead the focus of this project is to provide the core primitives to build a CQRS system that leverages an event journal as its primary data store (commonly referred to as *event sourcing*). 
 
 We have decided to focus most of our effort on the *command processing* and *event generation* side of the CQRS system with the view that the Kafka Streams technology provides a very rich and expressive API for reading and transforming event streams and generating view projections from them. 
