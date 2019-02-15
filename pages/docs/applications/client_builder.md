@@ -37,7 +37,7 @@ The client can now publish commands using the [command API](command_api.html).
 
 The `addCommands` method on the `EventSourcedClient` works similarly to the aggregate builder. However the client only needs to know about the commands, and provide serdes  for serialization. It does not need to know about the command and event handlers.
 
-The Client ID, specified in `withClientId`, should be different for each client instance, or at least for each host machine the client is running on. If you have many clients, and don't create separate client IDs for each client, it will r
+The Client ID, specified in `withClientId`, should be different for each client instance, or at least for each host machine the client is running on. If you have many clients, and don't create separate client IDs for each client, it will result in unncessary network traffic.
 
 ## Combined server and client
 
