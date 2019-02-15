@@ -11,7 +11,7 @@ to wire these all together and produce a `AggregateSpec`.
 An `AggregateSpec` represents everything Simple Sourcing needs to know about a single aggregate.
 
 ```java
-AgregateSpec userSpec = AggregateBuilder.<UserKey, UserCommand, UserEvent, Optional<User>>newBuilder()
+AggregateSpec userSpec = AggregateBuilder.<UserKey, UserCommand, UserEvent, Optional<User>>newBuilder()
                 .withName("user")
                 .withSerdes(avroAggregateSerdes)
                 .withResourceNamingStrategy(new PrefixResourceNamingStrategy("application_avro_"))

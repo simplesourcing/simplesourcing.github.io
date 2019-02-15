@@ -19,7 +19,7 @@ CQRS stands for Command Query Responsibility Segregation. It is a distributed de
 for writing to a system is separated from the responsibility for reading from it.
 
 It is frequently used to improve performance by relieving the write subsystem of all querying responsibilities,
-and separately optimising the read and write subsystems for their respective workloads. 
+and separately optimizing the read and write subsystems for their respective workloads. 
 Reading and writing are often performed by different services.
 
 With CQRS the following principles hold true:

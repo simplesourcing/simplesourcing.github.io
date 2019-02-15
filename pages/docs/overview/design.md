@@ -4,7 +4,7 @@ title: Design Overview
 permalink: design.html
 ---
 
-With Simple Sourcing you are responsible for defining the domain model for your aggregates, the associated commands and events 
+With Simple Sourcing you are responsible for defining the domain model for your aggregates, the associated commands and events, 
 and the functions for generating these entities. 
 
 Simple Sourcing provides an [API](api.html) for submitting these commands, 
@@ -22,7 +22,7 @@ against **aggregates** each identified by a unique key.
 
 The **Command Handler** is responsible for accepting these commands and validating them against a **projection**
 of the aggregate state. If it accepts the command, it generates one or more **events** to represent the changes
-made to the aggregate. These events are pushed into an **Event Store**, an append only record of all the events
+made to the aggregate. These events are pushed into an **Event Store**, an append-only record of all the events
 applied to each aggregate.
 
 One or more **Projectors** listen on the stream of events and build up a materialized view or **projection**

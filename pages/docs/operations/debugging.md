@@ -29,7 +29,7 @@ Add the following `logback.xml` file to your application resources folder:
 
 ## Broker access
 
-Docker manages connections between all the docker containers. However if you want to access the Kafka broker
+Docker manages connections between all the Docker containers. However if you want to access the Kafka broker
 from outside a container, there's one extra step required. Kafka is very specific about the hostname
 it listens on - it must match the value specified via the `KAFKA_ADVERTISED_LISTENERS` environment variable.
 
@@ -40,7 +40,7 @@ to `/etc/hosts` or `C:\Windows\System32\Drivers\etc\hosts`:
 127.0.0.1	broker
 ```
 
-Once that's added you can then run and debug your Kafka Streams app in your favourite IDE connecting to the Kafka
+Once that's added you can then run and debug your Kafka Streams app in your favorite IDE connecting to the Kafka
 broker running within docker.
 
 ## Clearing state

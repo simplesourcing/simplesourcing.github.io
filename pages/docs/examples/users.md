@@ -25,13 +25,13 @@ public class User {
 }
 ```
 
-An aggregate is modelled as a POJO and here we use Lombok annotations to
+An aggregate is modeled as a POJO and here we use Lombok annotations to
 avoid writing boilerplate code for getters/setters/constructors etc.
 
 ## Events
 
 Now that we have an aggregate we events to describe the changes to the
-aggregate over time. These events will be stored (in kafka) to record
+aggregate over time. These events will be stored (in Kafka) to record
 the sequence of changes to each User.
 
 Once events are stored they are an immutable record that the aggregate
@@ -70,9 +70,9 @@ Once again we use the Lombok `@Data` annotation to reduce boilerplate.
 
 As it is the events which are persisted to Kafka, each event must be
 serializable. If you are using Json, then no extra code may be
-necessary, however for Avro, an idl and mapping code will be required.
+necessary, however for Avro, an IDL and mapping code will be required.
 
-For each event add an equivalent record to the avro idl. For example:
+For each event add an equivalent record to the Avro IDL. For example:
 
 ```java
   record UserInserted {
@@ -133,7 +133,7 @@ static Aggregator<YearOfBirthUpdated, Optional<User>> handleYearOfBirthUpdated()
 ```
 
 `Aggregator` is a Functional Interface in Java, so the `handleXyz` methods
-return a lamda function which does the update to the current aggregate.
+return a lambda function which does the update to the current aggregate.
 
 The `currentAggregate` is defined as `Optional<User>` so `map` ensures
 the update is only applied if the value exists.
@@ -168,8 +168,8 @@ public interface UserCommand {
  }
  ```
 
-Commands are also stored in Kafka an such are are required to be
-serializable. If using Avro then avro idl, and domain mappers will be
+Commands are also stored in Kafka and as such are required to be
+serializable. If using Avro then Avro IDL, and domain mappers will be
 required.
 
 ## Command handlers
@@ -196,7 +196,7 @@ fail if another update has already changed his name to Jon.
 
 Once again, within the update, `currentAggregate` is `Optional` so we use
 `map` to only update it if it exists. In the case the `currentAggregate`
-doesn't exist we return a `failure` with and appropriate error message.
+doesn't exist we return a `failure` with an appropriate error message.
 
 ## Wiring it all together
 
@@ -315,8 +315,8 @@ There is a bit to this so we'll go through it:
   because sending a command is an asynchronous operation. The parameters
   are as follows:
   * `key` - a unique identifier for this user that we have generated
-  * `Sequence.first()` - the state we expect the the user to be in. In
-  this case as the user hasn't been created yet it will be the `0`, or
+  * `Sequence.first()` - the state we expect the user to be in. In
+  this, case as the user hasn't been created yet, it will be the `0`, or
   the `first()` number in a sequence.
   * `UUID.randomUUID()` - An identifier for this command so it can be
   queried later. As we call `publishAndQueryCommand` there is no need for
@@ -335,7 +335,7 @@ There is a bit to this so we'll go through it:
 
 We can finally put everything together. We need to get hold of a
 `commandAPI` so it can be passed into the business logic. The following
-builds one with the relevant kafka settings.
+builds one with the relevant Kafka settings.
 
 ```java
 final CommandAPISet aggregateSet = new EventSourcedApp()

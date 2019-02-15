@@ -16,7 +16,7 @@ Comprehensive documentation of this example is [included here...]()
 
 # Auction
 
-A more complex example of a auction application built with Simple Sourcing.
+A more complex example of an auction application built with Simple Sourcing.
 
 This can be found in the example repo in [`examples/auction`](https://github.com/simplesourcing/simplesource-examples/tree/master/examples/auction).
 
