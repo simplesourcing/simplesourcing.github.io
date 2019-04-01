@@ -71,7 +71,7 @@ Each of the example applications has one or more `Runner` classes with main meth
 
 ### User example (Avro)
 
-1. **Start the backend**
+1. **Starting the dependencies**
     
     From the project root folder:
     
@@ -79,7 +79,7 @@ Each of the example applications has one or more `Runner` classes with main meth
     docker-compose up
     ```
 
-1. **Start the backend**
+1. **Starting the backend**
 
     ```bash
     cd examples/user
@@ -88,7 +88,7 @@ Each of the example applications has one or more `Runner` classes with main meth
 
 ### Auction example
 
-The dependencies and the front end run in Docker. The backend is run locally.
+The dependencies and the frontend run in Docker. The backend is run locally.
 
 1. **Starting the dependencies**
     
@@ -114,7 +114,7 @@ The dependencies and the front end run in Docker. The backend is run locally.
     ./runStreams.sh
     ```
 
-1. **Starting the front end** 
+1. **Starting the frontend** 
     
     *In Docker:*
     
