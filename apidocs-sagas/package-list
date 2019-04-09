@@ -17,6 +17,7 @@ io.simplesource.saga.saga.app
 io.simplesource.saga.serialization.avro
 io.simplesource.saga.serialization.utils
 io.simplesource.saga.shared.constants
+io.simplesource.saga.shared.kafka
 io.simplesource.saga.shared.serialization
 io.simplesource.saga.shared.streams
 io.simplesource.saga.shared.topics
