@@ -1,7 +1,7 @@
 ---
 layout: page
 title: IDE Setup
-permalink: ide.html
+permalink: /simple_sourcing_ide.html
 ---
 
 ## Intellij IDEA

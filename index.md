@@ -2,7 +2,7 @@
 layout: default-landing
 title:  "Simple Sourcing"
 hide_sidebar: true
-permalink: index.html
+permalink: /index.html
 ---
 
 <div class="container">

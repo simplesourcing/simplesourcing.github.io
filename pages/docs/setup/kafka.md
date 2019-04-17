@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kafka Setup
-permalink: kafka.html
+permalink: /simple_sourcing_kafka.html
 ---
 
 ## Local Kafka development setup

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Aggregate Builders
-permalink: aggregate_builders.html
+permalink: /simple_sourcing_aggregate_builders.html
 ---
 
 Having defined the aggregate model, and the associate aggregate command and event handlers, 
@@ -22,7 +22,7 @@ AggregateSpec userSpec = AggregateBuilder.<UserKey, UserCommand, UserEvent, Opti
 ```
 
 We can define multiple aggregate types, each with their own `AggregateSpec`,
-then assemble them all with the [`EventSourcingApp` DSL](application_builder.html), and start the application.
+then assemble them all with the [`EventSourcingApp` DSL](/simple_sourcing_application_builder.html), and start the application.
 
 The `EventSourcingApp` DSL also has an `addAggregate` method that provides an `AggregateBuilder`. 
 With this pattern, you provide a function that applies the build steps, and don't have to instantiate the builder directly.

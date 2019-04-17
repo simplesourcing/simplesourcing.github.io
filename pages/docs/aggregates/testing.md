@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Testing
-permalink: testing.html
+permalink: /simple_sourcing_testing.html
 ---
 
 The `simplesource-command-testutils` module includes utility classes to help test your implementation.

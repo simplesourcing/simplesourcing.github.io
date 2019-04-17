@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Command Handlers
-permalink: commandhandlers.html
+permalink: /simple_sourcing_commandhandlers.html
 ---
 
 An aggregate has one or more commands associated with it, and each of these commands, once invoked, may result in one or more events being generated.

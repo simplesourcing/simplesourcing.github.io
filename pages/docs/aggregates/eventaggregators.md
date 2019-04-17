@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Event aggregators
-permalink: eventaggregators.html
+permalink: /simple_sourcing_eventaggregators.html
 ---
 
 An event handler, or event aggregator, is a function which takes the current aggregate, 

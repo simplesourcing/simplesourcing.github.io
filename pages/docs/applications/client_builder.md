@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Building the Client
-permalink: client_builder.html
+permalink: /simple_sourcing_client_builder.html
 ---
 
 The entry point into a Simple Sourcing client is the `EventSourcedClient` DSL. With this you can:
 * Set the Kafka for configuration to specify how to interact with the Kafka cluster
 * Add a set of commands for one or more aggregates
 * Call the `build` method which returns a `CommandAPISet`. A `CommandAPISet` provides access to a  
-[`CommandAPI`](command_api.html) for each aggregate
+[`CommandAPI`](/simple_sourcing_command_api.html) for each aggregate
 
 For example:
 
@@ -33,7 +33,7 @@ public static void main(final String[] args) {
 }
 ```
 
-The client can now publish commands using the [command API](command_api.html).
+The client can now publish commands using the [command API](/simple_sourcing_command_api.html).
 
 The `addCommands` method on the `EventSourcedClient` works similarly to the aggregate builder. However the client only needs to know about the commands, and provide serdes  for serialization. It does not need to know about the command and event handlers.
 

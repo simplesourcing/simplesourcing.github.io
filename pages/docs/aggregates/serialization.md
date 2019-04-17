@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Serialization
-permalink: serialization.html
+permalink: /simple_sourcing_serialization.html
 ---
 
 Any Kafka streams operation that writes to disk requires a [Serde](https://kafka.apache.org/21/javadoc/org/apache/kafka/common/serialization/Serde.html) 

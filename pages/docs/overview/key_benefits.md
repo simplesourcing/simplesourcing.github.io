@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Key Benefits
-permalink: key_benefits.html
+permalink: /simple_sourcing_key_benefits.html
 sidebar: docs_sidebar
 ---
 

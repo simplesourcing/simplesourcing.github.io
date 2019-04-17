@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Development Environment Setup
-permalink: setup.html
+permalink: /simple_sourcing_setup.html
 ---
 
 ## IDE setup

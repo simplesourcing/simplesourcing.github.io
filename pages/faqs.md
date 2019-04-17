@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "FAQs"
-permalink: faqs.html
+permalink: /simple_sourcing_faqs.html
 ---
 
 # Frequently Asked Questions

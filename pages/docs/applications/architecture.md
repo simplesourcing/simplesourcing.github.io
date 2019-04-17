@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Architecture Overview
-permalink: architecture.html
+permalink: /simple_sourcing_architecture.html
 ---
 
 Simple Sourcing is designed to take advantage of the horizontally scalable deployment model of Kafka Streams. A typical Simple Sourcing implementation will consist of multiple `EventSourcedApp` stream processing instances, each of them running in their own JVM process.

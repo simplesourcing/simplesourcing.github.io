@@ -6,6 +6,6 @@ topnav:
   - title: Home
     url: index.html
   - title: Documentation
-    url: docs_home.html
+    url: /simple_sourcing_docs_home.html
   - title: GitHub
     external_url: https://github.com/simplesourcing/simplesource

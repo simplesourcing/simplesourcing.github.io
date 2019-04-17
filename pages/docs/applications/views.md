@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Creating Views
-permalink: views.html
+permalink: /simple_sourcing_views.html
 ---
 
 Creating read views involves consuming one or more of the projection topics and writing them to a database suitable for querying. 

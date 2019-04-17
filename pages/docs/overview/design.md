@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Design Overview
-permalink: design.html
+permalink: /simple_sourcing_design.html
 ---
 
 With Simple Sourcing you are responsible for defining the domain model for your aggregates, the associated commands and events, 
 and the functions for generating these entities. 
 
-Simple Sourcing provides an [API](api.html) for submitting these commands, 
+Simple Sourcing provides an [API](/simple_sourcing_api.html) for submitting these commands, 
 and behind the scenes manages the persistence of the event store and any other state to Kafka.
 
 Simple Sourcing also provides the guarantee that if a command is accepted, it will process it, 

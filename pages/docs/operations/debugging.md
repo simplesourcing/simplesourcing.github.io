@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Debugging and Monitoring
-permalink: debugging.html
+permalink: /simple_sourcing_debugging.html
 ---
 
 ## Logging

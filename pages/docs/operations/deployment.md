@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kafka Deployment
-permalink: deployment.html
+permalink: /simple_sourcing_deployment.html
 ---
 
 ## Deploying to Kafka

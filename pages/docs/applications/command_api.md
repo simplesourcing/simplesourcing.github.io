@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Command API
-permalink: command_api.html
+permalink: /simple_sourcing_command_api.html
 ---
 
 A `CommandAPISet` provides a `CommandAPI` for each of the aggregates added. The `CommandAPI` has methods to publish commands,
 and wait for the result to these commands.
 
-The `CommandAPISet` is created by the [client builder](client_builder.html).
+The `CommandAPISet` is created by the [client builder](/simple_sourcing_client_builder.html).
 
 Note that result of the command only will only be whether the command succeeded or failed:
 * If successful, the command sequence number

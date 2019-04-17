@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Users Example in Detail
-permalink: users.html
+permalink: /simple_sourcing_users.html
 ---
 
 Here we will explore a very simple example of creating and updating a user

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: API Overview
-permalink: programming_model.html
+permalink: /simple_sourcing_programming_model.html
 ---
 
 ## Programming model
@@ -9,9 +9,9 @@ permalink: programming_model.html
 Building an event sourcing application using Simple Sourcing involves the following steps:
 
 1. Define the aggregates the application will use
-2. Implement the [aggregate command and event handlers](aggregate_api.html)
-3. Create the [event sourcing streaming application](application_builder.html)
-4. Create Simple Sourcing [client instances](client_builder.html) where required
+2. Implement the [aggregate command and event handlers](/simple_sourcing_aggregate_api.html)
+3. Create the [event sourcing streaming application](/simple_sourcing_application_builder.html)
+4. Create Simple Sourcing [client instances](/simple_sourcing_client_builder.html) where required
 
 ## Language choice
 

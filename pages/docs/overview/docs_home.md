@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Introduction
-permalink: docs_home.html
+permalink: /simple_sourcing_docs_home.html
 sidebar: docs_sidebar
 ---
 
@@ -15,19 +15,19 @@ We have decided to focus most of our effort on the *command processing* and *eve
 
 We may investigate some options to providing a lightweight read side API in the future but for now that is out of scope of the core project.
 
-This documentation assumes basic knowledge of [Event Sourcing and CQRS](event_sourcing.html) principles and terminology. 
+This documentation assumes basic knowledge of [Event Sourcing and CQRS](/simple_sourcing_event_sourcing.html) principles and terminology. 
 
 If you're new to either of these, there's some great introductory articles and talks listed in the *Background reading* section below to get you started.
 
 ## Why use Simple Sourcing?
 
-[Here are some of the key benefits](key_benefits.html) of using Simple Sourcing for building an event sourcing application using Kafka.
+[Here are some of the key benefits](/simple_sourcing_key_benefits.html) of using Simple Sourcing for building an event sourcing application using Kafka.
 
 ## Getting started
 
-If you want to jump in straight away and see an example system running locally see the [Quick Start](quickstart.html)
+If you want to jump in straight away and see an example system running locally see the [Quick Start](/simple_sourcing_quickstart.html)
 
-For more information on the design of the system see the [Design Overview](design.html)
+For more information on the design of the system see the [Design Overview](/simple_sourcing_design.html)
 
 ## Project source
 
@@ -38,5 +38,5 @@ Examples: [https://github.com/simplesourcing/simplesource-examples](https://gith
 
 ## Background reading
 
-   * [Event Sourcing and CQRS](event_sourcing.html) - a brief description of these concepts
+   * [Event Sourcing and CQRS](/simple_sourcing_event_sourcing.html) - a brief description of these concepts
 {% include_relative further_reading.md %}

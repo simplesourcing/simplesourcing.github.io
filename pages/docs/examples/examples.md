@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Example Projects
-permalink: examples.html
+permalink: /simple_sourcing_examples.html
 ---
 
 Sample code is available on Github in the [Simple Sourcing example repo](https://github.com/simplesourcing/simplesource-examples) 

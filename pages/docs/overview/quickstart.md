@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Quick Start
-permalink: quickstart.html
+permalink: /simple_sourcing_quickstart.html
 ---
 
 ## Including Simple Sourcing in your project

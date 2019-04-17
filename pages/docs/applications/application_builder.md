@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Building the Application
-permalink: application_builder.html
+permalink: /simple_sourcing_application_builder.html
 ---
 
 The entry point into a Simple Sourcing application is the `EventSourcedApp` DSL. With this you can:
 * Set the Kafka for configuration to specify how to interact with the Kafka cluster
-* Add one or more [aggregates](aggregate_builders.html) and wire in and their associated [command and event handlers](aggregate_api.html)
+* Add one or more [aggregates](/simple_sourcing_aggregate_builders.html) and wire in and their associated [command and event handlers](/simple_sourcing_aggregate_api.html)
 * Call the `start` method which starts the application
 
 For example:
@@ -32,4 +32,4 @@ public static void main(final String[] args) {
 }
 ```
 
-The application is now ready to receive commands published using the [command API](command_api.html).
+The application is now ready to receive commands published using the [command API](/simple_sourcing_command_api.html).
