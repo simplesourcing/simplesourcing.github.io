@@ -31,6 +31,10 @@ For each aggregate written in the saga, Simple Sagas remembers the version numbe
 that aggregate instance later in the same saga, it will check the version number to ensure that the aggregate has not been overwritten by another process.
 
 This action processor is indispensible for building more complex event sourcing systems.
+
+To use the event sourcing action processor, use the [`EventSourcingBuilder`](/apidocs-sagas/io/simplesource/saga/action/eventsourcing/EventSourcingBuilder.html), 
+passing in an [`EventSourcingSpec`](/apidocs-sagas/io/simplesource/saga/action/eventsourcing/EventSourcingSpec.html),
+which contains the data and functions required to define the it.
  
 #### Async action processor
 

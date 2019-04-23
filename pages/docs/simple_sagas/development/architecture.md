@@ -20,3 +20,5 @@ Sagas can be executed by:
 * Using the [client API](/simple_sagas_client_api.html) from any JVM application.
 
 [Saga actions](/simple_sagas_key_concepts.html#actions-and-commands) must share a common underlying type. See the [serialization page](/simple_sagas_serialization.html#saga-action-command-type) for more details on this.
+
+The deployment requirements and setup are identical to those for [Simple Sourcing](/simple_sourcing_deployment.html).

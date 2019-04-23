@@ -75,7 +75,7 @@ From the project folder for this repo, in separate terminal windows:
     
 The Kafka topics are created as required.
     
-If it all runs correctly, you should see some console output that ends with this sort of thing:
+If it all runs correctly, you should see some console output that ends with some log output:
 ```text
 09:02:24.725 [saga-...] INFO  SagaStream - stateTransitionsActionResponse: 1b230f=SagaActionStatusChanged(1b230fc9-fa9b-40f7-8007-01e5831f4d93,a2ad32f5-54b0-43b4-bb24-49678e508c56,Completed)
 09:02:24.963 [saga-...] INFO  SagaStream - sagaState: 1b230f=InProgress=>5-(e06ac7,Completed)-(719a58,Completed)-(a2ad32,Completed)

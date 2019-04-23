@@ -18,7 +18,7 @@ entries:
       output: web
       url: /simple_sourcing_quickstart.html
 
-    - title: Simple Sourcing
+    - title: Event Sourcing
       output: web
       type: empty
       subfolders:

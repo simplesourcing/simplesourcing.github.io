@@ -30,27 +30,28 @@ If a saga action fails and the compensation process begins, the arrows of the sa
 ### Actions and commands
 
 Actions are the individual steps involved in saga execution. 
-However depending on the saga state not necessarily the same operation gets executed.
-When the saga is in failure mode, only the compensating actions get executed.
+However, depending on the saga state, not necessarily the same operation gets executed.
+When the saga is in failure mode, the compensating actions get executed.
 
 So from a Simple Saga nomenclature point of view we make the following distinction:
 * *action* represents a vertex in the saga dependency graph.
 * Each action has an associated *action command* or simply *command*.
 * Each action may have an associated *compensation command* or *undo command*.
 
-Compensation commands must be the *inverse* of the action command - they have the property that whatever state changes are applied by an action command are reversed by the
-corresponding compensation command. 
+Compensation commands must be the *inverse* of the action command - they have the property that the state changes 
+applied by an action command are reversed by the corresponding compensation command. 
 
-Compensation commands should also have the property that they can't fail. If they do fail, this should be considered an unexpected exception. 
-The remaining compensation actions are still executed, but the failure of the saga should be escalated.
+Compensation commands should also have the property that they can't fail. If they do fail, this 
+is considered an unexpected exception.  The remaining compensation actions are still executed, 
+but the failure of the saga should be escalated.
 
 ### Consistency
 
 Traditional relational databases satisfy the so called [ACID](https://en.wikipedia.org/wiki/ACID_(computer_science)) properties for transactions.
 Saga transactions are able to preserve these properties, with the exception of the isolation property:
 * The inverse property of compensation commands ensures the *atomicity* of the saga as a whole. A failed saga should have no overall effect on system state.
+* Sagas do not preserve the *isolation*, as the intermediate states are visible as the saga progresses.
 * Sagas transactions are *eventually consistent*.
-* Sagas do not preserve the isolation *isolation*.
 
 ### Idempotence
 
