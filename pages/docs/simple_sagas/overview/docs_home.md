@@ -22,7 +22,8 @@ Simple Sagas is designed to make building saga applications easy:
 * Functional interfaces - everything should be defined and created in a functional, declarative style, with no complex ordering dependencies to figure out (e.g. you need to invoke "A" before you can create "B").
 * Minimised Kafka exposure - You don't need to be a Kafka streams expert to use the framework.
 * Sensible defaults - everything works out the box with as little configuration as possible, yet it's still possible to fine tune and override everything.
-* Topic management - topic creation is integrated into the framework. Any topic that is required will be created by the platform at the right time.
+* Topic management - topic creation is integrated into the framework. 
+Any topic that is required will be created by the platform as required.
 
 ### Next Steps
 
