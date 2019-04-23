@@ -5,7 +5,9 @@ topnav:
   items:
   - title: Home
     url: index.html
-  - title: Documentation
+  - title: Event Sourcing
     url: /simple_sourcing_docs_home.html
+  - title: Sagas
+    url: /simple_sagas_docs_home.html
   - title: GitHub
     external_url: https://github.com/simplesourcing/simplesource

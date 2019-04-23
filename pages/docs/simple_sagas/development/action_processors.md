@@ -18,8 +18,11 @@ All actions have an associated action type. This is used to:
 
 To utilise action processors, it is recommended to create an [`ActionApp`](/apidocs-sagas/io/simplesource/saga/action/ActionApp.html) and then add them with the `withActionProcessor` method. 
 
-The following action processors are provided out-the-box.
-### Event sourcing action processor
+### Simple Sagas action processors
+
+The following action processors are provided by Simple Sagas out-the-box:
+
+#### Event sourcing action processor
   
 This turns action requests into Simple Sourcing command requests and translates the command response into action responses.
 
@@ -29,14 +32,14 @@ that aggregate instance later in the same saga, it will check the version number
 
 This action processor is indispensible for building more complex event sourcing systems.
  
-### Async action processor
+#### Async action processor
 
 This invokes an arbitrary asynchronous function. When this function completes, a response is returned to the saga coordinator. The result of the function can also 
 be logged to an arbitrary Kafka topic.
 
 This action processor is extremely useful for sagas that need to coordinate between microservices.
 
-### Http action processor
+#### Http action processor
   
 A thin wrapper around the async action processor is provided to interact with Http web services. It is interface only, as it better left up to the 
 client to decide which Http client framework to use.

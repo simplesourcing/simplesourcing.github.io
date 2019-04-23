@@ -145,7 +145,10 @@ entries:
               url: /simple_sagas_action_processors.html
             - title: Saga Coordinator
               output: web
-              url: /simple_sagas_saga-coordinator.html
+              url: /simple_sagas_saga_coordinator.html
+            - title: Serialization
+              output: web
+              url: /simple_sagas_serialization.html
             - title: API Reference
               output: web
               external_url: /apidocs-sagas
