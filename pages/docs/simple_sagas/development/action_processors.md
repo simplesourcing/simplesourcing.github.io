@@ -43,6 +43,12 @@ be logged to an arbitrary Kafka topic.
 
 This action processor is extremely useful for sagas that need to coordinate between microservices.
 
+To use the async action processor, use the [`AsyncBuilder`](/apidocs-sagas/io/simplesource/saga/action/async/AsyncBuilder.html), 
+passing in an [`AsyncSpec`](/apidocs-sagas/io/simplesource/saga/action/eventsourcing/AsyncSpec.html),
+which contains the data and functions required to define the it.
+
+The key parameter is the [`asyncFunction`](/apidocs-sagas/io/simplesource/saga/action/async/AsyncSpec.html#asyncFunction). 
+
 #### Http action processor
   
 A thin wrapper around the async action processor is provided to interact with Http web services. It is interface only, as it better left up to the 
