@@ -18,7 +18,7 @@ It also ensures that all events are written in the same order as the commands ar
 ![Event Sourcing with CQRS](/images/simple-sourcing-diagram.png)
 
 In the CQRS model implemented by Simple Sourcing, clients are able to submit **commands** to perform an action
-against **aggregates** each identified by a unique key.
+against **aggregates** each identified by a unique key. 
 
 The **Command Handler** is responsible for accepting these commands and validating them against a **projection**
 of the aggregate state. If it accepts the command, it generates one or more **events** to represent the changes
@@ -36,3 +36,5 @@ Simple Sourcing is an opinionated API. We have made a couple of design decisions
    * Publishing a command is an asynchronous operation. To guarantee ordering of updates into the event store
      we push commands through a topic in Kafka, allowing us to process all commands for a given key serially while
      still providing a highly performant, horizontally scalable solution.
+   * Simple Sourcing commands operate on single aggregate instances. To extend Simple Sourcing to transactions against multiple aggregates,
+     we recommend [Simple Sagas](/simple_sagas_docs_home.html).

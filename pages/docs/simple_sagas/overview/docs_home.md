@@ -5,7 +5,8 @@ permalink: /simple_sagas_docs_home.html
 sidebar: docs_sidebar
 ---
 
-A [*saga*](/simple_sagas_key_concepts.html) is a protocol for executing distributed transactions. Simple Sagas is a framework for defining and executing sagas using Kafka.
+A [*saga*](/simple_sagas_key_concepts.html) is a protocol for executing distributed transactions. 
+Simple Sagas is a framework for defining and executing sagas using Kafka.
 
 The framework consists of:
 * A [*Saga builder DSL*](/simple_sagas_saga_builder_dsl.html) to define saga requests, and a [*client API*](/simple_sagas_client_api.html) to submit requests and handle the response.
