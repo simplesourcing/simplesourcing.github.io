@@ -2,7 +2,7 @@
 layout: page
 title:  "Use Cases"
 section: "section_home"
-permalink: usecases.html
+permalink: /simple_sourcing_usecases.html
 ---
 
 ## Use cases

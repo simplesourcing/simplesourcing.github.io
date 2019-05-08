@@ -2,7 +2,7 @@
 layout: default-landing
 title:  "Simple Sourcing"
 hide_sidebar: true
-permalink: index.html
+permalink: /index.html
 ---
 
 <div class="container">
@@ -10,7 +10,7 @@ permalink: index.html
     <!-- REMOVED <div class="jumbotron">
         <div class="container">
             <h1 class="text-center">A Java library for Event Sourcing</h1>
-            <p class="text-center"><a href="docs_home.html" class="btn btn-primary">View Documentation</a></p>
+            <p class="text-center"><a href="simple_sourcing_docs_home.html" class="btn btn-primary">View Documentation</a></p>
         </div>
     </div>
 

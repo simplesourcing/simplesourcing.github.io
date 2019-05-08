@@ -5,102 +5,161 @@ entries:
   product: Simple Sourcing
 
   folders:
-  - title: Getting Started
+  - title: Simple Sourcing
+    type: empty
     output: web
+    folderitems:
+
+    - title: Introduction
+      output: web
+      url: /simple_sourcing_docs_home.html
+
+    - title: Quick Start
+      output: web
+      url: /simple_sourcing_quickstart.html
+
+    - title: Event Sourcing
+      output: web
+      type: empty
+      subfolders:
+
+        - title: Concepts
+          output: web
+          subfolderitems:
+            - title: Event Sourcing
+              output: web
+              url: /simple_sourcing_event_sourcing.html
+            - title: Key Concepts
+              output: web
+              url: /simple_sourcing_key_concepts.html
+            - title: Design Overview
+              output: web
+              url: /simple_sourcing_design.html
+            - title: Key Benefits
+              output: web
+              url: /simple_sourcing_key_benefits.html
+
+        - title: Simple Sourcing API
+          output: web
+          subfolderitems:
+            - title: API Overview
+              output: web
+              url: /simple_sourcing_programming_model.html
+            - title: Aggregate API
+              output: web
+              url: /simple_sourcing_aggregate_api.html
+            - title: Command Handlers
+              output: web
+              url: /simple_sourcing_commandhandlers.html
+            - title: Event Handlers
+              output: web
+              url: /simple_sourcing_eventaggregators.html
+            - title: Serialization
+              output: web
+              url: /simple_sourcing_serialization.html
+            - title: Testing the Implementation
+              output: web
+              url: /simple_sourcing_testing.html
+            - title: API Reference
+              output: web
+              url: /apidocs
+
+        - title: Creating Applications
+          output: web
+          subfolderitems:
+            - title: Architecture Overview
+              output: web
+              url: /simple_sourcing_architecture.html
+            - title: Assembling Aggregates
+              output: web
+              url: /simple_sourcing_aggregate_builders.html
+            - title: Building the Application
+              output: web
+              url: /simple_sourcing_application_builder.html
+            - title: Creating Views
+              output: web
+              url: /simple_sourcing_views.html
+
+        - title: Simple Sourcing Clients
+          output: web
+          subfolderitems:
+            - title: Building the Client
+              output: web
+              url: /simple_sourcing_client_builder.html
+            - title: Command API
+              output: web
+              url: /simple_sourcing_command_api.html
+
+        - title: Deployment and Operations
+          output: web
+          subfolderitems:
+            - title: Development Environment Setup
+              output: web
+              url: /simple_sourcing_setup.html
+            - title: Kafka Deployment
+              output: web
+              url: /simple_sourcing_deployment.html
+            - title: Debugging and Monitoring
+              output: web
+              url: /simple_sourcing_debugging.html
+
+        - title: Examples
+          output: web
+          subfolderitems:
+            - title: Example Projects
+              output: web
+              url: /simple_sourcing_examples.html
+            - title: Users Example in Detail
+              output: web
+              url: /simple_sourcing_users.html
+  - title: Simple Sagas
+    type: empty
+    output: web
+
     folderitems:
     - title: Introduction
       output: web
-      url: /docs_home.html
-    - title: Key Benefits
-      output: web
-      url: /key_benefits.html
+      url: /simple_sagas_docs_home.html
+
     - title: Quick Start
       output: web
-      url: /quickstart.html
+      url: /simple_sagas_quick_start.html
 
-  - title: Concepts
-    output: web
-    folderitems:
-      - title: Event Sourcing
-        output: web
-        url: /event_sourcing.html
-      - title: Key Concepts
-        output: web
-        url: /key_concepts.html
-      - title: Design Overview
-        output: web
-        url: /design.html
-
-  - title: Simple Sourcing API
-    output: web
-    folderitems:
-      - title: API Overview
-        output: web
-        url: /programming_model.html
-      - title: Aggregate API
-        output: web
-        url: /aggregate_api.html
-      - title: Command Handlers
-        output: web
-        url: /commandhandlers.html
-      - title: Event Handlers
-        output: web
-        url: /eventaggregators.html
-      - title: Serialization
-        output: web
-        url: /serialization.html
-      - title: Testing the Implementation
-        output: web
-        url: /testing.html
-      - title: API Reference
-        output: web
-        url: /apidocs
-
-  - title: Creating Applications
-    output: web
-    folderitems:
-      - title: Architecture Overview
-        output: web
-        url: /architecture.html
-      - title: Assembling Aggregates
-        output: web
-        url: /aggregate_builders.html
-      - title: Building the Application
-        output: web
-        url: /application_builder.html
-      - title: Creating Views
-        output: web
-        url: /views.html
-
-  - title: Simple Sourcing Clients
-    output: web
-    folderitems:
-      - title: Building the Client
-        output: web
-        url: /client_builder.html
-      - title: Command API
-        output: web
-        url: /command_api.html
-
-  - title: Deployment and Operations
-    output: web
-    folderitems:
-    - title: Development Environment Setup
+    - title: Key Concepts
       output: web
-      url: /setup.html
-    - title: Kafka Deployment
-      output: web
-      url: /deployment.html
-    - title: Debugging and Monitoring
-      output: web
-      url: /debugging.html
+      url: /simple_sagas_key_concepts.html
 
-  - title: Examples
-    output: web
-    folderitems:
-      - title: Example Projects
-        output: web
-        url: /examples.html
-      - title: Users Example in Detail
-        output: web
-        url: /users.html
+    - title: Simple Sagas
+      output: web
+      type: empty
+      subfolders:
+
+        - title: Development
+          output: web
+          subfolderitems:
+            - title: Architecture
+              output: web
+              url: /simple_sagas_architecture.html
+            - title: Action Processors
+              output: web
+              url: /simple_sagas_action_processors.html
+            - title: Saga Coordinator
+              output: web
+              url: /simple_sagas_saga_coordinator.html
+            - title: Serialization
+              output: web
+              url: /simple_sagas_serialization.html
+            - title: API Reference
+              output: web
+              external_url: /apidocs-sagas
+
+        - title: Client Usage
+          output: web
+          subfolderitems:
+            - title: Saga Builder DSL
+              output: web
+              url: /simple_sagas_saga_builder_dsl.html
+            - title: Saga Client API
+              output: web
+              url: /simple_sagas_client_api.html
+
