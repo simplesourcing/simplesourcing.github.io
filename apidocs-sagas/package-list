@@ -1,4 +1,3 @@
-io.simplesource.saga.action
 io.simplesource.saga.action.app
 io.simplesource.saga.action.async
 io.simplesource.saga.action.eventsourcing
@@ -7,7 +6,6 @@ io.simplesource.saga.client.api
 io.simplesource.saga.client.dsl
 io.simplesource.saga.model.action
 io.simplesource.saga.model.api
-io.simplesource.saga.model.config
 io.simplesource.saga.model.messages
 io.simplesource.saga.model.saga
 io.simplesource.saga.model.serdes
