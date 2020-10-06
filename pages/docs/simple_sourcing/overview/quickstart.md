@@ -34,7 +34,7 @@ git clone https://github.com/simplesourcing/simplesource-examples.git
 
 ## Local build and run
 
-For comprehensive information on local development setup, please visit the [setup page](/setup.html).
+For comprehensive information on local development setup, please visit the [setup page](/simple_sourcing_setup.html).
 
 ### Pre-requisites
 
